@@ -12,6 +12,10 @@ class homepageViewController: UIViewController {
     var presenterObject : ViewToPresenterHomepageProtocol?
     
     @IBOutlet weak var homepageTableView: UITableView!
+    @IBOutlet weak var graphicView: BarChartView!
+    @IBOutlet weak var graphicBackground: UIImageView!
+    @IBOutlet weak var helloLabel: UILabel!
+    
     var AccountList = [accounts]()
     
     override func viewDidLoad() {
@@ -21,6 +25,11 @@ class homepageViewController: UIViewController {
         
         homepageTableView.dataSource = self
         homepageTableView.delegate = self
+        
+        graphicView.backgroundColor = .clear
+        graphicBackground.image = UIImage(named: "graphicBackground")
+        
+        helloLabel.text = "Hello, King!"
         
         veritabaniKopyala()
         
@@ -50,7 +59,7 @@ extension homepageViewController: PresenterToViewHomepageProtocol {
     
     func sendDataView(accountList: Array<accounts>) {
         self.AccountList = accountList
-        //self.homepageTableView.reloadData()
+        self.homepageTableView.reloadData()
     }
     
 }

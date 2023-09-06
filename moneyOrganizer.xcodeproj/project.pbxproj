@@ -9,21 +9,52 @@
 /* Begin PBXBuildFile section */
 		6E41318D2AA8CF95002E4343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41318C2AA8CF95002E4343 /* AppDelegate.swift */; };
 		6E41318F2AA8CF95002E4343 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41318E2AA8CF95002E4343 /* SceneDelegate.swift */; };
-		6E4131912AA8CF95002E4343 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4131902AA8CF95002E4343 /* ViewController.swift */; };
+		6E4131912AA8CF95002E4343 /* homepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4131902AA8CF95002E4343 /* homepageViewController.swift */; };
 		6E4131942AA8CF95002E4343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4131922AA8CF95002E4343 /* Main.storyboard */; };
 		6E4131962AA8CF96002E4343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4131952AA8CF96002E4343 /* Assets.xcassets */; };
 		6E4131992AA8CF96002E4343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4131972AA8CF96002E4343 /* LaunchScreen.storyboard */; };
+		6E577EC32AA8D1AE0033BA06 /* homepageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E577EC22AA8D1AE0033BA06 /* homepageRouter.swift */; };
+		6E577EC52AA8D1F10033BA06 /* homepageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E577EC42AA8D1F10033BA06 /* homepageInteractor.swift */; };
+		6E577EC72AA8D2120033BA06 /* homepagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E577EC62AA8D2120033BA06 /* homepagePresenter.swift */; };
+		6E577ECA2AA8D2560033BA06 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E577EC92AA8D2560033BA06 /* Entity.swift */; };
+		6E577ED72AA8D2DC0033BA06 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E577ECD2AA8D2DB0033BA06 /* FMResultSet.m */; };
+		6E577ED82AA8D2DC0033BA06 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E577ECE2AA8D2DB0033BA06 /* FMDatabasePool.m */; };
+		6E577ED92AA8D2DC0033BA06 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E577ECF2AA8D2DB0033BA06 /* FMDatabaseQueue.m */; };
+		6E577EDA2AA8D2DC0033BA06 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E577ED12AA8D2DB0033BA06 /* FMDatabase.m */; };
+		6E577EDB2AA8D2DC0033BA06 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E577ED62AA8D2DC0033BA06 /* FMDatabaseAdditions.m */; };
+		6E577EDE2AA8D6120033BA06 /* homepageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E577EDD2AA8D6120033BA06 /* homepageTableViewCell.swift */; };
+		6E577EE22AA8DA580033BA06 /* wallet.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E577EE12AA8DA580033BA06 /* wallet.sqlite */; };
+		6EA7C8732AA8D14600C2E729 /* homepageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7C8722AA8D14600C2E729 /* homepageProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6E4131892AA8CF95002E4343 /* moneyOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moneyOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E41318C2AA8CF95002E4343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E41318E2AA8CF95002E4343 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6E4131902AA8CF95002E4343 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E4131902AA8CF95002E4343 /* homepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageViewController.swift; sourceTree = "<group>"; };
 		6E4131932AA8CF95002E4343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E4131952AA8CF96002E4343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E4131982AA8CF96002E4343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E41319A2AA8CF96002E4343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E577EC22AA8D1AE0033BA06 /* homepageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageRouter.swift; sourceTree = "<group>"; };
+		6E577EC42AA8D1F10033BA06 /* homepageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageInteractor.swift; sourceTree = "<group>"; };
+		6E577EC62AA8D2120033BA06 /* homepagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepagePresenter.swift; sourceTree = "<group>"; };
+		6E577EC92AA8D2560033BA06 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		6E577ECB2AA8D2DB0033BA06 /* moneyOrganizer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "moneyOrganizer-Bridging-Header.h"; sourceTree = "<group>"; };
+		6E577ECC2AA8D2DB0033BA06 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		6E577ECD2AA8D2DB0033BA06 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		6E577ECE2AA8D2DB0033BA06 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		6E577ECF2AA8D2DB0033BA06 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		6E577ED02AA8D2DB0033BA06 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		6E577ED12AA8D2DB0033BA06 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		6E577ED22AA8D2DB0033BA06 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		6E577ED32AA8D2DC0033BA06 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		6E577ED42AA8D2DC0033BA06 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		6E577ED52AA8D2DC0033BA06 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		6E577ED62AA8D2DC0033BA06 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		6E577EDD2AA8D6120033BA06 /* homepageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageTableViewCell.swift; sourceTree = "<group>"; };
+		6E577EE12AA8DA580033BA06 /* wallet.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = wallet.sqlite; sourceTree = "<group>"; };
+		6EA7C8722AA8D14600C2E729 /* homepageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +71,7 @@
 		6E4131802AA8CF95002E4343 = {
 			isa = PBXGroup;
 			children = (
+				6E577EE12AA8DA580033BA06 /* wallet.sqlite */,
 				6E41318B2AA8CF95002E4343 /* moneyOrganizer */,
 				6E41318A2AA8CF95002E4343 /* Products */,
 			);
@@ -58,13 +90,95 @@
 			children = (
 				6E41318C2AA8CF95002E4343 /* AppDelegate.swift */,
 				6E41318E2AA8CF95002E4343 /* SceneDelegate.swift */,
-				6E4131902AA8CF95002E4343 /* ViewController.swift */,
+				6EA7C86C2AA8D0AF00C2E729 /* homepage-module */,
+				6E577EC82AA8D24D0033BA06 /* Entity */,
 				6E4131922AA8CF95002E4343 /* Main.storyboard */,
 				6E4131952AA8CF96002E4343 /* Assets.xcassets */,
 				6E4131972AA8CF96002E4343 /* LaunchScreen.storyboard */,
 				6E41319A2AA8CF96002E4343 /* Info.plist */,
+				6E577ED22AA8D2DB0033BA06 /* FMDatabase.h */,
+				6E577ED12AA8D2DB0033BA06 /* FMDatabase.m */,
+				6E577ED42AA8D2DC0033BA06 /* FMDatabaseAdditions.h */,
+				6E577ED62AA8D2DC0033BA06 /* FMDatabaseAdditions.m */,
+				6E577ECC2AA8D2DB0033BA06 /* FMDatabasePool.h */,
+				6E577ECE2AA8D2DB0033BA06 /* FMDatabasePool.m */,
+				6E577ED32AA8D2DC0033BA06 /* FMDatabaseQueue.h */,
+				6E577ECF2AA8D2DB0033BA06 /* FMDatabaseQueue.m */,
+				6E577ED02AA8D2DB0033BA06 /* FMDB.h */,
+				6E577ED52AA8D2DC0033BA06 /* FMResultSet.h */,
+				6E577ECD2AA8D2DB0033BA06 /* FMResultSet.m */,
+				6E577ECB2AA8D2DB0033BA06 /* moneyOrganizer-Bridging-Header.h */,
 			);
 			path = moneyOrganizer;
+			sourceTree = "<group>";
+		};
+		6E577EC82AA8D24D0033BA06 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				6E577EC92AA8D2560033BA06 /* Entity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		6E577EDC2AA8D5F90033BA06 /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6E577EDD2AA8D6120033BA06 /* homepageTableViewCell.swift */,
+			);
+			path = tableViewCell;
+			sourceTree = "<group>";
+		};
+		6EA7C86C2AA8D0AF00C2E729 /* homepage-module */ = {
+			isa = PBXGroup;
+			children = (
+				6E577EDC2AA8D5F90033BA06 /* tableViewCell */,
+				6EA7C8712AA8D10C00C2E729 /* protocols */,
+				6EA7C8702AA8D0D800C2E729 /* router */,
+				6EA7C86F2AA8D0CE00C2E729 /* interactor */,
+				6EA7C86E2AA8D0C100C2E729 /* presenter */,
+				6EA7C86D2AA8D0BA00C2E729 /* view */,
+			);
+			path = "homepage-module";
+			sourceTree = "<group>";
+		};
+		6EA7C86D2AA8D0BA00C2E729 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6E4131902AA8CF95002E4343 /* homepageViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		6EA7C86E2AA8D0C100C2E729 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6E577EC62AA8D2120033BA06 /* homepagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		6EA7C86F2AA8D0CE00C2E729 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6E577EC42AA8D1F10033BA06 /* homepageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		6EA7C8702AA8D0D800C2E729 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				6E577EC22AA8D1AE0033BA06 /* homepageRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		6EA7C8712AA8D10C00C2E729 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6EA7C8722AA8D14600C2E729 /* homepageProtocols.swift */,
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +213,7 @@
 				TargetAttributes = {
 					6E4131882AA8CF95002E4343 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -127,6 +242,7 @@
 			files = (
 				6E4131992AA8CF96002E4343 /* LaunchScreen.storyboard in Resources */,
 				6E4131962AA8CF96002E4343 /* Assets.xcassets in Resources */,
+				6E577EE22AA8DA580033BA06 /* wallet.sqlite in Resources */,
 				6E4131942AA8CF95002E4343 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +254,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E4131912AA8CF95002E4343 /* ViewController.swift in Sources */,
+				6E4131912AA8CF95002E4343 /* homepageViewController.swift in Sources */,
+				6EA7C8732AA8D14600C2E729 /* homepageProtocols.swift in Sources */,
 				6E41318D2AA8CF95002E4343 /* AppDelegate.swift in Sources */,
+				6E577EDA2AA8D2DC0033BA06 /* FMDatabase.m in Sources */,
 				6E41318F2AA8CF95002E4343 /* SceneDelegate.swift in Sources */,
+				6E577EDE2AA8D6120033BA06 /* homepageTableViewCell.swift in Sources */,
+				6E577ECA2AA8D2560033BA06 /* Entity.swift in Sources */,
+				6E577EC52AA8D1F10033BA06 /* homepageInteractor.swift in Sources */,
+				6E577ED72AA8D2DC0033BA06 /* FMResultSet.m in Sources */,
+				6E577EDB2AA8D2DC0033BA06 /* FMDatabaseAdditions.m in Sources */,
+				6E577ED82AA8D2DC0033BA06 /* FMDatabasePool.m in Sources */,
+				6E577ED92AA8D2DC0033BA06 /* FMDatabaseQueue.m in Sources */,
+				6E577EC32AA8D1AE0033BA06 /* homepageRouter.swift in Sources */,
+				6E577EC72AA8D2120033BA06 /* homepagePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MC4355596S;
@@ -293,8 +421,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,8 +432,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.saitkaraca.moneyOrganizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "moneyOrganizer/moneyOrganizer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MC4355596S;
@@ -321,8 +453,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,8 +464,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.saitkaraca.moneyOrganizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "moneyOrganizer/moneyOrganizer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

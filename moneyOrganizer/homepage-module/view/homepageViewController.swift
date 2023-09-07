@@ -39,6 +39,14 @@ class homepageViewController: UIViewController {
         presenterObject?.readAccountsFile()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homepageToDetail" {
+            let index = sender as? Int
+            let targetVC = segue.destination as! detailViewController
+            targetVC.whichAccount = AccountList[index!]
+        }
+    }
+    
     func veritabaniKopyala() {
         let bundleYolu = Bundle.main.path(forResource: "wallet", ofType: ".sqlite")
         let hedefYol = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
@@ -90,7 +98,8 @@ extension homepageViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.reloadRows(at: [indexPath], with: .automatic)
-        print(indexPath.row)
+        performSegue(withIdentifier: "homepageToDetail", sender: indexPath.row)
+        //print(indexPath.row)
     }
     
 }

@@ -13,6 +13,11 @@
 		6E4131942AA8CF95002E4343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4131922AA8CF95002E4343 /* Main.storyboard */; };
 		6E4131962AA8CF96002E4343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4131952AA8CF96002E4343 /* Assets.xcassets */; };
 		6E4131992AA8CF96002E4343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4131972AA8CF96002E4343 /* LaunchScreen.storyboard */; };
+		6E561C692AA9C854003719F9 /* detailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E561C682AA9C854003719F9 /* detailProtocols.swift */; };
+		6E561C6B2AA9C865003719F9 /* detailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E561C6A2AA9C865003719F9 /* detailRouter.swift */; };
+		6E561C6D2AA9C873003719F9 /* detailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E561C6C2AA9C873003719F9 /* detailInteractor.swift */; };
+		6E561C6F2AA9C87C003719F9 /* detailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E561C6E2AA9C87C003719F9 /* detailPresenter.swift */; };
+		6E561C712AA9C88B003719F9 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E561C702AA9C88B003719F9 /* detailViewController.swift */; };
 		6E577EC32AA8D1AE0033BA06 /* homepageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E577EC22AA8D1AE0033BA06 /* homepageRouter.swift */; };
 		6E577EC52AA8D1F10033BA06 /* homepageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E577EC42AA8D1F10033BA06 /* homepageInteractor.swift */; };
 		6E577EC72AA8D2120033BA06 /* homepagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E577EC62AA8D2120033BA06 /* homepagePresenter.swift */; };
@@ -23,8 +28,9 @@
 		6E577EDA2AA8D2DC0033BA06 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E577ED12AA8D2DB0033BA06 /* FMDatabase.m */; };
 		6E577EDB2AA8D2DC0033BA06 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E577ED62AA8D2DC0033BA06 /* FMDatabaseAdditions.m */; };
 		6E577EDE2AA8D6120033BA06 /* homepageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E577EDD2AA8D6120033BA06 /* homepageTableViewCell.swift */; };
-		6E577EE22AA8DA580033BA06 /* wallet.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E577EE12AA8DA580033BA06 /* wallet.sqlite */; };
 		6EA7C8732AA8D14600C2E729 /* homepageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7C8722AA8D14600C2E729 /* homepageProtocols.swift */; };
+		6EE72A422AAA42EB002D2337 /* detailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE72A412AAA42EB002D2337 /* detailTableViewCell.swift */; };
+		6EE72A462AAA61EF002D2337 /* wallet.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6EE72A452AAA61EF002D2337 /* wallet.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,11 @@
 		6E4131952AA8CF96002E4343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E4131982AA8CF96002E4343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E41319A2AA8CF96002E4343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E561C682AA9C854003719F9 /* detailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailProtocols.swift; sourceTree = "<group>"; };
+		6E561C6A2AA9C865003719F9 /* detailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailRouter.swift; sourceTree = "<group>"; };
+		6E561C6C2AA9C873003719F9 /* detailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailInteractor.swift; sourceTree = "<group>"; };
+		6E561C6E2AA9C87C003719F9 /* detailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailPresenter.swift; sourceTree = "<group>"; };
+		6E561C702AA9C88B003719F9 /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		6E577EC22AA8D1AE0033BA06 /* homepageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageRouter.swift; sourceTree = "<group>"; };
 		6E577EC42AA8D1F10033BA06 /* homepageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageInteractor.swift; sourceTree = "<group>"; };
 		6E577EC62AA8D2120033BA06 /* homepagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepagePresenter.swift; sourceTree = "<group>"; };
@@ -53,8 +64,9 @@
 		6E577ED52AA8D2DC0033BA06 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		6E577ED62AA8D2DC0033BA06 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		6E577EDD2AA8D6120033BA06 /* homepageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageTableViewCell.swift; sourceTree = "<group>"; };
-		6E577EE12AA8DA580033BA06 /* wallet.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = wallet.sqlite; sourceTree = "<group>"; };
 		6EA7C8722AA8D14600C2E729 /* homepageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageProtocols.swift; sourceTree = "<group>"; };
+		6EE72A412AAA42EB002D2337 /* detailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailTableViewCell.swift; sourceTree = "<group>"; };
+		6EE72A452AAA61EF002D2337 /* wallet.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = wallet.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +83,6 @@
 		6E4131802AA8CF95002E4343 = {
 			isa = PBXGroup;
 			children = (
-				6E577EE12AA8DA580033BA06 /* wallet.sqlite */,
 				6E41318B2AA8CF95002E4343 /* moneyOrganizer */,
 				6E41318A2AA8CF95002E4343 /* Products */,
 			);
@@ -88,9 +99,11 @@
 		6E41318B2AA8CF95002E4343 /* moneyOrganizer */ = {
 			isa = PBXGroup;
 			children = (
+				6EE72A452AAA61EF002D2337 /* wallet.sqlite */,
 				6E41318C2AA8CF95002E4343 /* AppDelegate.swift */,
 				6E41318E2AA8CF95002E4343 /* SceneDelegate.swift */,
 				6EA7C86C2AA8D0AF00C2E729 /* homepage-module */,
+				6E561C622AA9C806003719F9 /* detail-module */,
 				6E577EC82AA8D24D0033BA06 /* Entity */,
 				6E4131922AA8CF95002E4343 /* Main.storyboard */,
 				6E4131952AA8CF96002E4343 /* Assets.xcassets */,
@@ -110,6 +123,59 @@
 				6E577ECB2AA8D2DB0033BA06 /* moneyOrganizer-Bridging-Header.h */,
 			);
 			path = moneyOrganizer;
+			sourceTree = "<group>";
+		};
+		6E561C622AA9C806003719F9 /* detail-module */ = {
+			isa = PBXGroup;
+			children = (
+				6EE72A402AAA42D7002D2337 /* tableViewCell */,
+				6E561C672AA9C837003719F9 /* protocols */,
+				6E561C662AA9C831003719F9 /* router */,
+				6E561C652AA9C82A003719F9 /* interactor */,
+				6E561C642AA9C823003719F9 /* presenter */,
+				6E561C632AA9C816003719F9 /* view */,
+			);
+			path = "detail-module";
+			sourceTree = "<group>";
+		};
+		6E561C632AA9C816003719F9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6E561C702AA9C88B003719F9 /* detailViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		6E561C642AA9C823003719F9 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6E561C6E2AA9C87C003719F9 /* detailPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		6E561C652AA9C82A003719F9 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6E561C6C2AA9C873003719F9 /* detailInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		6E561C662AA9C831003719F9 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				6E561C6A2AA9C865003719F9 /* detailRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		6E561C672AA9C837003719F9 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6E561C682AA9C854003719F9 /* detailProtocols.swift */,
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 		6E577EC82AA8D24D0033BA06 /* Entity */ = {
@@ -181,6 +247,14 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
+		6EE72A402AAA42D7002D2337 /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6EE72A412AAA42EB002D2337 /* detailTableViewCell.swift */,
+			);
+			path = tableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,7 +316,7 @@
 			files = (
 				6E4131992AA8CF96002E4343 /* LaunchScreen.storyboard in Resources */,
 				6E4131962AA8CF96002E4343 /* Assets.xcassets in Resources */,
-				6E577EE22AA8DA580033BA06 /* wallet.sqlite in Resources */,
+				6EE72A462AAA61EF002D2337 /* wallet.sqlite in Resources */,
 				6E4131942AA8CF95002E4343 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,14 +329,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E4131912AA8CF95002E4343 /* homepageViewController.swift in Sources */,
+				6E561C712AA9C88B003719F9 /* detailViewController.swift in Sources */,
+				6E561C6B2AA9C865003719F9 /* detailRouter.swift in Sources */,
+				6E561C692AA9C854003719F9 /* detailProtocols.swift in Sources */,
 				6EA7C8732AA8D14600C2E729 /* homepageProtocols.swift in Sources */,
 				6E41318D2AA8CF95002E4343 /* AppDelegate.swift in Sources */,
 				6E577EDA2AA8D2DC0033BA06 /* FMDatabase.m in Sources */,
 				6E41318F2AA8CF95002E4343 /* SceneDelegate.swift in Sources */,
 				6E577EDE2AA8D6120033BA06 /* homepageTableViewCell.swift in Sources */,
+				6E561C6D2AA9C873003719F9 /* detailInteractor.swift in Sources */,
 				6E577ECA2AA8D2560033BA06 /* Entity.swift in Sources */,
 				6E577EC52AA8D1F10033BA06 /* homepageInteractor.swift in Sources */,
+				6E561C6F2AA9C87C003719F9 /* detailPresenter.swift in Sources */,
 				6E577ED72AA8D2DC0033BA06 /* FMResultSet.m in Sources */,
+				6EE72A422AAA42EB002D2337 /* detailTableViewCell.swift in Sources */,
 				6E577EDB2AA8D2DC0033BA06 /* FMDatabaseAdditions.m in Sources */,
 				6E577ED82AA8D2DC0033BA06 /* FMDatabasePool.m in Sources */,
 				6E577ED92AA8D2DC0033BA06 /* FMDatabaseQueue.m in Sources */,

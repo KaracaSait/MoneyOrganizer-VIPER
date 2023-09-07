@@ -20,3 +20,17 @@ class accounts {
     
 }
 
+class accountDetail {
+    var id:Int?
+    var activity:String?
+    var price:String?
+    var date:String?
+    
+    init(id: Int? = nil, activity: String? = nil, price: String? = nil, date: String? = nil ) {
+        self.id = id
+        self.activity = activity
+        self.price = price
+        self.date = date
+    }
+    
+}

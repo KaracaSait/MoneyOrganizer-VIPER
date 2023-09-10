@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 // Main Protocols
 
@@ -16,6 +17,8 @@ protocol ViewToPresenterDetailProtocol {
     
     func dataRead (whichAccount:Int)
     
+    func showAlert(title: String, message: String, whichAccount:Int)
+    
 }
 
 protocol PresenterToInteractorDetailProtocol {
@@ -24,22 +27,25 @@ protocol PresenterToInteractorDetailProtocol {
     
     func accountDataRead (whichAccount:Int)
     
+    func sendMoneyToInteractor(money:String, whichAccount:Int, explanation:String, date:String)
+    
 }
 
 // Carrier Protocols
 
 protocol InteractorToPresenterDetailProtocol {
     
-    //func sendDataPresentar(accountList:Array<accounts>)
     func sendDataPresentar(detailList:Array<accountDetail>)
     func sendTotalMoneyPresentar(totalMoney:Int)
+    
 }
 
 protocol PresenterToViewDetailProtocol {
     
-    //func sendDataView(accountList:Array<accounts>)
     func sendDataView(detailList:Array<accountDetail>)
     func sendTotalMoneyView(totalMoney:Int)
+    
+    func presenterAlert(_ alertController: UIAlertController)
 }
 
 // Authorization Protocol

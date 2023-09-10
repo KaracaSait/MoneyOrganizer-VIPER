@@ -23,8 +23,7 @@ class detailInteractor : PresenterToInteractorDetailProtocol {
     func accountDataRead(whichAccount:Int) {
         
         var list = [accountDetail]()
-        let totalMoney = [String]()
-        var total = 0
+        var money = 0
         
         db?.open()
         
@@ -45,28 +44,19 @@ class detailInteractor : PresenterToInteractorDetailProtocol {
                 while rs.next() {
                     
                     let part = accountDetail(id: Int(rs.string(forColumn: "id"))!,
-                                             activity: rs.string(forColumn: "activity")!,
-                                             price: rs.string(forColumn: "price")!,
-                                             date: rs.string(forColumn: "date")!)
-                    
+                                             activity: rs.string(forColumn: "activity"),
+                                             price: rs.string(forColumn: "price"),
+                                             date: rs.string(forColumn: "date"))
                     list.append(part)
                     
-                    // --> Total Money Calculate
-                    
-                    let money = accountDetail(price: rs.string(forColumn: "price")!)
-                    list.append(money)
-                    
-                    for str in totalMoney {
-                        if let intValue = Int(str) {
-                            total += intValue
-                        }
+                    let totalMoney = rs.string(forColumn: "price")
+                    if let totalMoneyInt = Int(totalMoney!) {
+                        money += totalMoneyInt
                     }
-                    
-                    
                     
                 }
             }
-            detailPresenter?.sendTotalMoneyPresentar(totalMoney: total)
+            detailPresenter?.sendTotalMoneyPresentar(totalMoney: money)
             detailPresenter?.sendDataPresentar(detailList: list)
             
         } catch {
@@ -74,5 +64,39 @@ class detailInteractor : PresenterToInteractorDetailProtocol {
         }
         db?.close()
         
+    }
+    
+    func sendMoneyToInteractor(money: String, whichAccount: Int, explanation: String, date: String) {
+        
+        db?.open()
+        
+        do {
+            if UserDefaults.standard.string(forKey: "process") == "plus" {
+                switch whichAccount {
+                    case 1:
+                        try db!.executeUpdate("INSERT INTO bankaccount (price,activity,date) VALUES (?,?,?)", values: ["+" + money, explanation, date])
+                    case 2:
+                        try db!.executeUpdate("INSERT INTO cashaccount (price,activity,date) VALUES (?,?,?)", values: ["+" + money, explanation, date])
+                    case 3:
+                        try db!.executeUpdate("INSERT INTO creditcard (price,activity,date) VALUES (?,?,?)", values: ["+" + money, explanation, date])
+                    default: break
+                    
+                }
+            }else if UserDefaults.standard.string(forKey: "process") == "minus" {
+                switch whichAccount {
+                    case 1:
+                        try db!.executeUpdate("INSERT INTO bankaccount (price,activity,date) VALUES (?,?,?)", values: ["-" + money, explanation, date])
+                    case 2:
+                        try db!.executeUpdate("INSERT INTO cashaccount (price,activity,date) VALUES (?,?,?)", values: ["-" + money, explanation, date])
+                    case 3:
+                        try db!.executeUpdate("INSERT INTO creditcard (price,activity,date) VALUES (?,?,?)", values: ["-" + money, explanation, date])
+                    default: break
+                }
+            }
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
+        accountDataRead(whichAccount: whichAccount)
     }
 }

@@ -127,7 +127,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="tYM-4R-kPG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -284,13 +284,13 @@
                                                     <rect key="frame" x="25" y="11" width="343" height="127"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d08-MI-oUx">
-                                                    <rect key="frame" x="40" y="31" width="51.333333333333343" height="20"/>
+                                                    <rect key="frame" x="40" y="31" width="51.666666666666657" height="20"/>
                                                     <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrc-ZL-cMO">
-                                                    <rect key="frame" x="40" y="88" width="313" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrc-ZL-cMO">
+                                                    <rect key="frame" x="40" y="71" width="313" height="19.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -305,6 +305,7 @@
                                             <constraints>
                                                 <constraint firstItem="dcf-iw-aqK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d08-MI-oUx" secondAttribute="trailing" constant="30" id="53Q-8j-DTq"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="dcf-iw-aqK" secondAttribute="trailing" constant="20" id="73E-AH-C88"/>
+                                                <constraint firstItem="nrc-ZL-cMO" firstAttribute="top" secondItem="d08-MI-oUx" secondAttribute="bottom" constant="20" id="8Au-I7-BfC"/>
                                                 <constraint firstItem="d08-MI-oUx" firstAttribute="leading" secondItem="EwR-Qa-jE9" secondAttribute="leadingMargin" constant="20" id="APt-il-g0H"/>
                                                 <constraint firstItem="Uhr-Uj-hhr" firstAttribute="top" secondItem="EwR-Qa-jE9" secondAttribute="topMargin" id="LLW-3S-jBr"/>
                                                 <constraint firstItem="Uhr-Uj-hhr" firstAttribute="leading" secondItem="EwR-Qa-jE9" secondAttribute="leadingMargin" constant="5" id="Mzi-LF-0qC"/>
@@ -313,7 +314,6 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="Uhr-Uj-hhr" secondAttribute="bottom" id="VU4-Dt-MzU"/>
                                                 <constraint firstItem="dcf-iw-aqK" firstAttribute="top" secondItem="EwR-Qa-jE9" secondAttribute="topMargin" constant="20" id="fbI-Ym-Ccm"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="nrc-ZL-cMO" secondAttribute="trailing" constant="20" id="gTA-cw-gsX"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="nrc-ZL-cMO" secondAttribute="bottom" constant="30" id="jbb-iV-kRJ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Uhr-Uj-hhr" secondAttribute="trailing" constant="5" id="o9x-1f-e6u"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -334,13 +334,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0I-9r-Dtf">
-                                <rect key="frame" x="30" y="122.99999999999999" width="333" height="27.333333333333329"/>
+                                <rect key="frame" x="30" y="123.00000000000001" width="333" height="27.666666666666671"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUf-FB-1bF">
-                                <rect key="frame" x="30" y="180.33333333333334" width="333" height="28"/>
+                                <rect key="frame" x="30" y="180.66666666666666" width="333" height="28"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

@@ -28,9 +28,9 @@
 		6E577EDA2AA8D2DC0033BA06 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E577ED12AA8D2DB0033BA06 /* FMDatabase.m */; };
 		6E577EDB2AA8D2DC0033BA06 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E577ED62AA8D2DC0033BA06 /* FMDatabaseAdditions.m */; };
 		6E577EDE2AA8D6120033BA06 /* homepageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E577EDD2AA8D6120033BA06 /* homepageTableViewCell.swift */; };
+		6E6942C52AADF517006035A2 /* wallet.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E6942C42AADF517006035A2 /* wallet.sqlite */; };
 		6EA7C8732AA8D14600C2E729 /* homepageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7C8722AA8D14600C2E729 /* homepageProtocols.swift */; };
 		6EE72A422AAA42EB002D2337 /* detailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE72A412AAA42EB002D2337 /* detailTableViewCell.swift */; };
-		6EE72A462AAA61EF002D2337 /* wallet.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6EE72A452AAA61EF002D2337 /* wallet.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,9 +64,9 @@
 		6E577ED52AA8D2DC0033BA06 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		6E577ED62AA8D2DC0033BA06 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		6E577EDD2AA8D6120033BA06 /* homepageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageTableViewCell.swift; sourceTree = "<group>"; };
+		6E6942C42AADF517006035A2 /* wallet.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = wallet.sqlite; sourceTree = "<group>"; };
 		6EA7C8722AA8D14600C2E729 /* homepageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageProtocols.swift; sourceTree = "<group>"; };
 		6EE72A412AAA42EB002D2337 /* detailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailTableViewCell.swift; sourceTree = "<group>"; };
-		6EE72A452AAA61EF002D2337 /* wallet.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = wallet.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 		6E41318B2AA8CF95002E4343 /* moneyOrganizer */ = {
 			isa = PBXGroup;
 			children = (
-				6EE72A452AAA61EF002D2337 /* wallet.sqlite */,
+				6E6942C42AADF517006035A2 /* wallet.sqlite */,
 				6E41318C2AA8CF95002E4343 /* AppDelegate.swift */,
 				6E41318E2AA8CF95002E4343 /* SceneDelegate.swift */,
 				6EA7C86C2AA8D0AF00C2E729 /* homepage-module */,
@@ -316,7 +316,7 @@
 			files = (
 				6E4131992AA8CF96002E4343 /* LaunchScreen.storyboard in Resources */,
 				6E4131962AA8CF96002E4343 /* Assets.xcassets in Resources */,
-				6EE72A462AAA61EF002D2337 /* wallet.sqlite in Resources */,
+				6E6942C52AADF517006035A2 /* wallet.sqlite in Resources */,
 				6E4131942AA8CF95002E4343 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

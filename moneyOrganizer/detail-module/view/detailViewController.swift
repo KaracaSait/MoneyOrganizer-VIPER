@@ -49,21 +49,31 @@ class detailViewController: UIViewController {
         
         //totalMoneyLabel.text = detailList
         accountLabel.text = whichAccount?.name!
-        //whichAccount?.id --> bunla interactorda işlemi yaptırıcaz
         
-        detailPresenterObject?.dataRead(whichAccount: (whichAccount?.id)!) // --> bunu unutursan 2 saat ne yanlış diye ararsın
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        detailPresenterObject?.dataRead(whichAccount: (whichAccount?.id)!)
     }
     
     @IBAction func plusButtonAction(_ sender: Any) {
+        UserDefaults.standard.set("plus", forKey: "process")
+        detailPresenterObject?.showAlert(title: "Add", message: "", whichAccount: (whichAccount?.id)!)
     }
     
     @IBAction func minusButtonAction(_ sender: Any) {
+        UserDefaults.standard.set("minus", forKey: "process")
+        detailPresenterObject?.showAlert(title: "Minus", message: "", whichAccount: (whichAccount?.id)!)
     }
     
 }
 
 extension detailViewController: PresenterToViewDetailProtocol {
+    
+    func presenterAlert(_ alertController: UIAlertController) {
+        present(alertController, animated: true, completion: nil)
+        detailTableView.reloadData() // ---> will run after saving inside the alert
+    }
     
     func sendDataView(detailList:Array<accountDetail>) {
         
@@ -90,7 +100,7 @@ extension detailViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.dateLabel.text = part.date
         cell.explanationLabel.text = "Explanation : \(part.activity ?? "-")"
-        cell.transactionLabel.text = part.price
+        cell.transactionLabel.text = part.price! + "$" 
         return cell
     }
     

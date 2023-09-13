@@ -31,11 +31,11 @@ class detailInteractor : PresenterToInteractorDetailProtocol {
             
             switch whichAccount {
             case 1:
-                rs = try db!.executeQuery("SELECT * FROM bankaccount", values: nil)
+                rs = try db!.executeQuery("SELECT * FROM bankaccount ORDER BY id DESC", values: nil)
             case 2:
-                rs = try db!.executeQuery("SELECT * FROM cashaccount", values: nil)
+                rs = try db!.executeQuery("SELECT * FROM cashaccount ORDER BY id DESC", values: nil)
             case 3:
-                rs = try db!.executeQuery("SELECT * FROM creditcard", values: nil)
+                rs = try db!.executeQuery("SELECT * FROM creditcard ORDER BY id DESC", values: nil)
             default: break
             }
             
@@ -98,5 +98,57 @@ class detailInteractor : PresenterToInteractorDetailProtocol {
         }
         db?.close()
         accountDataRead(whichAccount: whichAccount)
+    }
+    
+    func accountDataDel(id: Int, whichAccount: Int) {
+        db?.open()
+        
+        do {
+            switch whichAccount {
+            case 1:
+                try db?.executeUpdate("DELETE FROM bankaccount WHERE id = ?", values: [id])
+            case 2:
+                try db?.executeUpdate("DELETE FROM cashaccount WHERE id = ?", values: [id])
+            case 3:
+                try db?.executeUpdate("DELETE FROM creditcard WHERE id = ?", values: [id])
+            default: break
+            }
+        }catch{
+            print(error.localizedDescription)
+        }
+        accountDataRead(whichAccount: whichAccount)
+        db?.close()
+    }
+    
+    func accountRecentActivities(whichAccount: Int) {
+        db?.open()
+        
+        do {
+            
+            switch whichAccount {
+            case 1:
+                rs = try db!.executeQuery("SELECT * FROM bankaccount ORDER BY id DESC LIMIT 1", values: nil)
+            case 2:
+                rs = try db!.executeQuery("SELECT * FROM cashaccount ORDER BY id DESC LIMIT 1", values: nil)
+            case 3:
+                rs = try db!.executeQuery("SELECT * FROM creditcard ORDER BY id DESC LIMIT 1", values: nil)
+            default: break
+            }
+            
+            if let rs = rs {
+                
+                if rs.next() {
+                    let recentActivities = rs.string(forColumn: "price")
+                    detailPresenter?.sendRecentActivitiesPresentar(recentActivities: recentActivities!)
+                } else {
+                    detailPresenter?.sendRecentActivitiesPresentar(recentActivities: "No Action")
+                }
+            }
+            
+        }catch{
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
     }
 }

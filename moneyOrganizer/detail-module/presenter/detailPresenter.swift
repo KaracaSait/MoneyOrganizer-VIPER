@@ -18,14 +18,22 @@ class detailPresenter : ViewToPresenterDetailProtocol {
         detailInteractor?.accountDataRead(whichAccount: whichAccount)
     }
     
+    func dataDel(id: Int, whichAccount: Int) {
+        detailInteractor?.accountDataDel(id: id, whichAccount: whichAccount)
+    }
+    
+    func recentActivities(whichAccount: Int) {
+        detailInteractor?.accountRecentActivities(whichAccount: whichAccount)
+    }
+    
     func showAlert(title: String, message: String, whichAccount:Int) {
         
-        let yil = Calendar.current.component(.year, from: Date())
-        let ay = Calendar.current.component(.month, from: Date())
-        let gun = Calendar.current.component(.day, from: Date())
-        let tarih = "\(gun)/\(ay)/\(yil)"
+        let year = Calendar.current.component(.year, from: Date())
+        let month = Calendar.current.component(.month, from: Date())
+        let day = Calendar.current.component(.day, from: Date())
+        let date = "\(day)/\(month)/\(year)"
         
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: title, message: "", preferredStyle: .alert)
     
         alertController.addTextField { textfield in
             textfield.placeholder = "$"
@@ -35,12 +43,14 @@ class detailPresenter : ViewToPresenterDetailProtocol {
             textfield.placeholder = "Explanation"
             textfield.keyboardType = .default
         }
-        let okAction = UIAlertAction(title: "Add", style: .destructive){ action in
+        let okAction = UIAlertAction(title: message, style: .destructive){ action in
             if let money = alertController.textFields![0].text, !money.isEmpty {
                 if let explanation = alertController.textFields![1].text, !explanation.isEmpty {
-                    self.detailInteractor?.sendMoneyToInteractor(money: money, whichAccount: whichAccount, explanation: explanation,date: tarih)
+                    self.detailInteractor?.sendMoneyToInteractor(money: money, whichAccount: whichAccount, explanation: explanation,date: date)
+                    self.detailView?.reloadTableView(whichAccount: whichAccount)
                 } else {
-                    self.detailInteractor?.sendMoneyToInteractor(money: money, whichAccount: whichAccount, explanation: " -",date: tarih)
+                    self.detailInteractor?.sendMoneyToInteractor(money: money, whichAccount: whichAccount, explanation: " -",date: date)
+                    self.detailView?.reloadTableView(whichAccount: whichAccount)
                 }
             }
         }
@@ -63,5 +73,8 @@ extension detailPresenter : InteractorToPresenterDetailProtocol {
         detailView?.sendTotalMoneyView(totalMoney: totalMoney)
     }
     
+    func sendRecentActivitiesPresentar(recentActivities: String) {
+        detailView?.sendRecentActivitiesView(recentActivities: recentActivities)
+    }
     
 }

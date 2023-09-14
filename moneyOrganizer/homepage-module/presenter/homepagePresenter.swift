@@ -17,6 +17,14 @@ class homepagePresenter : ViewToPresenterHomepageProtocol {
         homepageInteractor?.readAccounts()
     }
     
+    func dataRead() {
+        homepageInteractor?.accountDataRead()
+    }
+    
+    func readAccountDetailFile() {
+        homepageInteractor?.readAccountDetail()
+    }
+    
 }
 
 
@@ -25,7 +33,24 @@ extension homepagePresenter : InteractorToPresenterHomepageProtocol {
     func sendDataPresentar(accountList: Array<accounts>) {
         homepageView?.sendDataView(accountList: accountList)
     }
-    
+    func sendBankAccountDetailPresentar(accountDetail: Array<accountDetail>) {
+        homepageView?.sendBankAccountDetailView(accountDetail: accountDetail)
+    }
+    func sendCashAccountDetailPresentar(accountDetail: Array<accountDetail>) {
+        homepageView?.sendCashAccountDetailView(accountDetail: accountDetail)
+    }
+    func sendCreditAccountDetailPresentar(accountDetail: Array<accountDetail>) {
+        homepageView?.sendCreditAccountDetailView(accountDetail: accountDetail)
+    }
+    func sendTotalMoneyBankPresentar(totalMoney: Int) {
+        homepageView?.sendTotalMoneyBankView(totalMoney: totalMoney)
+    }
+    func sendTotalMoneyCashPresentar(totalMoney: Int) {
+        homepageView?.sendTotalMoneyCashView(totalMoney: totalMoney)
+    }
+    func sendTotalMoneyCreditPresentar(totalMoney: Int) {
+        homepageView?.sendTotalMoneyCreditView(totalMoney: totalMoney)
+    }
 }
 
 class BarChartView: UIView {

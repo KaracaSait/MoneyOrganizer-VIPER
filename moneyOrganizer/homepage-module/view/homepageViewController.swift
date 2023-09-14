@@ -18,6 +18,14 @@ class homepageViewController: UIViewController {
     
     var AccountList = [accounts]()
     
+    var bankAccount = [accountDetail]()
+    var cashAccount = [accountDetail]()
+    var creditAccount = [accountDetail]()
+    
+    var bankAccountMoney:String?
+    var cashAccountMoney:String?
+    var creditAccountMoney:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +45,8 @@ class homepageViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         presenterObject?.readAccountsFile()
+        presenterObject?.dataRead()
+        presenterObject?.readAccountDetailFile()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,6 +80,29 @@ extension homepageViewController: PresenterToViewHomepageProtocol {
         self.homepageTableView.reloadData()
     }
     
+    func sendBankAccountDetailView(accountDetail: Array<accountDetail>) {
+        self.bankAccount = accountDetail
+    }
+    
+    func sendCashAccountDetailView(accountDetail: Array<accountDetail>) {
+        self.cashAccount = accountDetail
+    }
+    
+    func sendCreditAccountDetailView(accountDetail: Array<accountDetail>) {
+        self.creditAccount = accountDetail
+    }
+    
+    func sendTotalMoneyBankView(totalMoney: Int) {
+        self.bankAccountMoney = String(totalMoney)
+    }
+    
+    func sendTotalMoneyCashView(totalMoney: Int) {
+        self.cashAccountMoney = String(totalMoney)
+    }
+    
+    func sendTotalMoneyCreditView(totalMoney: Int) {
+        self.creditAccountMoney = String(totalMoney)
+    }
 }
 
 extension homepageViewController: UITableViewDelegate, UITableViewDataSource {
@@ -88,18 +121,74 @@ extension homepageViewController: UITableViewDelegate, UITableViewDataSource {
         cell.accountLabel.text = part.name
         cell.processLabel.text = "Recent Activities"
         
-        cell.moneyLabel.text = "25000 $"
-        cell.process1.text = "Starbucks"
-        cell.process2.text = "Migros"
-        cell.price1.text = "-50 $"
-        cell.price2.text = "-250 $"
+        switch indexPath.row {
+        case 0:
+            cell.moneyLabel.text = self.bankAccountMoney! + " $"
+            switch bankAccount.count{
+            case 1:
+                cell.process1.text = bankAccount[0].activity
+                cell.price1.text = bankAccount[0].price! + " $"
+                cell.process2.text = ""
+                cell.price2.text = ""
+            case 2:
+                cell.process1.text = bankAccount[0].activity
+                cell.price1.text = bankAccount[0].price! + " $"
+                cell.process2.text = bankAccount[1].activity
+                cell.price2.text = bankAccount[1].price! + " $"
+            default :
+                cell.process1.text = "No Activity"
+                cell.price1.text = ""
+                cell.process2.text = ""
+                cell.price2.text = ""
+            }
+        case 1:
+            cell.moneyLabel.text = self.cashAccountMoney! + " $"
+            switch cashAccount.count{
+            case 1:
+                cell.process1.text = cashAccount[0].activity
+                cell.price1.text = cashAccount[0].price! + " $"
+                cell.process2.text = ""
+                cell.price2.text = ""
+            case 2:
+                cell.process1.text = cashAccount[0].activity
+                cell.price1.text = cashAccount[0].price! + " $"
+                cell.process2.text = cashAccount[1].activity
+                cell.price2.text = cashAccount[1].price! + " $"
+            default :
+                cell.process1.text = "No Activity"
+                cell.price1.text = ""
+                cell.process2.text = ""
+                cell.price2.text = ""
+            }
+        case 2:
+            cell.moneyLabel.text = self.creditAccountMoney! + " $"
+            switch creditAccount.count{
+            case 1:
+                cell.process1.text = creditAccount[0].activity
+                cell.price1.text = creditAccount[0].price! + " $"
+                cell.process2.text = ""
+                cell.price2.text = ""
+            case 2:
+                cell.process1.text = creditAccount[0].activity
+                cell.price1.text = creditAccount[0].price! + " $"
+                cell.process2.text = creditAccount[1].activity
+                cell.price2.text = creditAccount[1].price! + " $"
+            default :
+                cell.process1.text = "No Activity"
+                cell.price1.text = ""
+                cell.process2.text = ""
+                cell.price2.text = ""
+            }
+        default: break
+        }
+        
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.reloadRows(at: [indexPath], with: .automatic)
         performSegue(withIdentifier: "homepageToDetail", sender: indexPath.row)
-        //print(indexPath.row)
     }
     
 }

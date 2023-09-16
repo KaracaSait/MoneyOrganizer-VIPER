@@ -47,6 +47,10 @@ class homepageViewController: UIViewController {
         presenterObject?.readAccountsFile()
         presenterObject?.dataRead()
         presenterObject?.readAccountDetailFile()
+        presenterObject?.readBarChart()
+        if let barChartView = self.graphicView {
+            barChartView.setNeedsDisplay()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

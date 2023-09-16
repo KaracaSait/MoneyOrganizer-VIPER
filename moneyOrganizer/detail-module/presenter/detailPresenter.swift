@@ -28,10 +28,9 @@ class detailPresenter : ViewToPresenterDetailProtocol {
     
     func showAlert(title: String, message: String, whichAccount:Int) {
         
-        let year = Calendar.current.component(.year, from: Date())
-        let month = Calendar.current.component(.month, from: Date())
-        let day = Calendar.current.component(.day, from: Date())
-        let date = "\(day)/\(month)/\(year)"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        let date = formatter.string(from: Date())
         
         let alertController = UIAlertController(title: title, message: "", preferredStyle: .alert)
     

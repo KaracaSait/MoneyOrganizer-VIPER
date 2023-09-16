@@ -143,4 +143,61 @@ class homepageInteractor : PresenterToInteractorHomepageProtocol {
         
         db?.close()
     }
+    
+    func readBarChartDetail(day:String) {
+        
+        var moneyPlus = 0
+        var moneyMinus = 0
+        
+        db?.open()
+        
+        do{
+            let rsBank = try db!.executeQuery("SELECT * FROM bankaccount WHERE date = '\(day)'", values: nil)
+            
+            while rsBank.next() {
+                
+                let totalMoney = rsBank.string(forColumn: "price")
+                if let totalMoneyInt = Int(totalMoney!) {
+                    if totalMoneyInt > 0 {
+                        moneyPlus += totalMoneyInt
+                    }else if totalMoneyInt < 0 {
+                        moneyMinus += totalMoneyInt
+                    }
+                }
+            }
+            
+            let rsCash = try db!.executeQuery("SELECT * FROM cashaccount WHERE date = '\(day)'", values: nil)
+            
+            while rsCash.next() {
+                
+                let totalMoney = rsCash.string(forColumn: "price")
+                if let totalMoneyInt = Int(totalMoney!) {
+                    if totalMoneyInt > 0 {
+                        moneyPlus += totalMoneyInt
+                    }else if totalMoneyInt < 0 {
+                        moneyMinus += totalMoneyInt
+                    }
+                }
+            }
+            
+            let rsCredit = try db!.executeQuery("SELECT * FROM creditcard WHERE date = '\(day)'", values: nil)
+            
+            while rsCredit.next() {
+                
+                let totalMoney = rsCredit.string(forColumn: "price")
+                if let totalMoneyInt = Int(totalMoney!) {
+                    if totalMoneyInt > 0 {
+                        moneyPlus += totalMoneyInt
+                    }else if totalMoneyInt < 0 {
+                        moneyMinus += totalMoneyInt
+                    }
+                }
+            }
+            homepagePresenter?.sendBarChartDetailPresentar(moneyPlus: moneyPlus, moneyMinus: -moneyMinus)
+        }catch{
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
+    }
 }

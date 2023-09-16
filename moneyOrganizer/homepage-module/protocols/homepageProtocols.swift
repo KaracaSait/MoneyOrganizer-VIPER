@@ -19,6 +19,8 @@ protocol ViewToPresenterHomepageProtocol {
     func dataRead()
     
     func readAccountDetailFile()
+    
+    func readBarChart()
 }
 
 protocol PresenterToInteractorHomepageProtocol {
@@ -30,6 +32,8 @@ protocol PresenterToInteractorHomepageProtocol {
     func accountDataRead()
     
     func readAccountDetail()
+    
+    func readBarChartDetail(day:String)
     
 }
 
@@ -44,6 +48,7 @@ protocol InteractorToPresenterHomepageProtocol {
     func sendTotalMoneyBankPresentar(totalMoney:Int)
     func sendTotalMoneyCashPresentar(totalMoney:Int)
     func sendTotalMoneyCreditPresentar(totalMoney:Int)
+    func sendBarChartDetailPresentar(moneyPlus:Int,moneyMinus:Int)
 }
 
 protocol PresenterToViewHomepageProtocol {

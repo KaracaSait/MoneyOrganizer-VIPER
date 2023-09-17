@@ -139,7 +139,7 @@ class detailInteractor : PresenterToInteractorDetailProtocol {
                 
                 if rs.next() {
                     let recentActivities = rs.string(forColumn: "price")
-                    detailPresenter?.sendRecentActivitiesPresentar(recentActivities: recentActivities! + " $")
+                    detailPresenter?.sendRecentActivitiesPresentar(recentActivities: recentActivities! + " €")
                 } else {
                     detailPresenter?.sendRecentActivitiesPresentar(recentActivities: "No Action")
                 }

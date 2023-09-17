@@ -9,6 +9,73 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Exchange Rate View Controller-->
+        <scene sceneID="Xak-3i-1Y6">
+            <objects>
+                <viewController id="WEs-GU-mn2" customClass="exchangeRateViewController" customModule="moneyOrganizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S4r-ER-Ngj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wu0-zE-Za8">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exchangeRateCell" rowHeight="100" id="hGD-VV-CW9" customClass="exchangeRateTableViewCell" customModule="moneyOrganizer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hGD-VV-CW9" id="O43-x0-20c">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IT-cv-tmS">
+                                                    <rect key="frame" x="30" y="52" width="333" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJd-1W-oTH">
+                                                    <rect key="frame" x="30" y="21" width="333" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZJd-1W-oTH" firstAttribute="top" secondItem="O43-x0-20c" secondAttribute="topMargin" constant="10" id="3KB-4p-WHp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZJd-1W-oTH" secondAttribute="trailing" constant="10" id="KAl-iK-VYe"/>
+                                                <constraint firstItem="3IT-cv-tmS" firstAttribute="top" secondItem="ZJd-1W-oTH" secondAttribute="bottom" constant="10" id="Lfw-zw-LFO"/>
+                                                <constraint firstItem="ZJd-1W-oTH" firstAttribute="leading" secondItem="O43-x0-20c" secondAttribute="leadingMargin" constant="10" id="Q1V-rO-wA1"/>
+                                                <constraint firstItem="3IT-cv-tmS" firstAttribute="leading" secondItem="O43-x0-20c" secondAttribute="leadingMargin" constant="10" id="fhs-7B-Wyh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3IT-cv-tmS" secondAttribute="trailing" constant="10" id="hpA-M1-dSP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rateName" destination="ZJd-1W-oTH" id="bZv-Fx-cWW"/>
+                                            <outlet property="ratePrice" destination="3IT-cv-tmS" id="4hW-sl-tTK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Epi-RT-9yn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wu0-zE-Za8" firstAttribute="top" secondItem="Epi-RT-9yn" secondAttribute="top" id="05N-3X-PoK"/>
+                            <constraint firstItem="Epi-RT-9yn" firstAttribute="bottom" secondItem="Wu0-zE-Za8" secondAttribute="bottom" id="Q1U-bn-wSJ"/>
+                            <constraint firstItem="Wu0-zE-Za8" firstAttribute="leading" secondItem="Epi-RT-9yn" secondAttribute="leading" id="ZKv-wd-GXU"/>
+                            <constraint firstItem="Epi-RT-9yn" firstAttribute="trailing" secondItem="Wu0-zE-Za8" secondAttribute="trailing" id="dSc-6D-f7A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JvK-MU-FJd"/>
+                    <connections>
+                        <outlet property="exchangeRateTableView" destination="Wu0-zE-Za8" id="PRU-MJ-Fjq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Xn-mr-hnx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983.96946564885491" y="714.78873239436621"/>
+        </scene>
         <!--Homepage View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -201,6 +268,11 @@
                     <navigationItem key="navigationItem" id="rna-WN-p4M">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="gearshape" catalog="system" id="K6V-8e-fAE">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="dollarsign" catalog="system" id="soQ-PS-9ze">
+                            <connections>
+                                <segue destination="WEs-GU-mn2" kind="show" id="qEP-6j-W2h"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -431,6 +503,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dollarsign" catalog="system" width="89" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="rectangle1" width="15" height="15"/>
         <image name="rectangle2" width="15" height="15"/>

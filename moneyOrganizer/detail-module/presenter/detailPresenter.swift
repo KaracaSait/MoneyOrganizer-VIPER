@@ -35,7 +35,7 @@ class detailPresenter : ViewToPresenterDetailProtocol {
         let alertController = UIAlertController(title: title, message: "", preferredStyle: .alert)
     
         alertController.addTextField { textfield in
-            textfield.placeholder = "$"
+            textfield.placeholder = "€"
             textfield.keyboardType = .numberPad
         }
         alertController.addTextField { textfield in

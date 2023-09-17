@@ -30,6 +30,13 @@
 		6E577EDE2AA8D6120033BA06 /* homepageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E577EDD2AA8D6120033BA06 /* homepageTableViewCell.swift */; };
 		6E6942C52AADF517006035A2 /* wallet.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E6942C42AADF517006035A2 /* wallet.sqlite */; };
 		6EA7C8732AA8D14600C2E729 /* homepageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7C8722AA8D14600C2E729 /* homepageProtocols.swift */; };
+		6ED674A92AB71C67002E3969 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED674A82AB71C67002E3969 /* Webservice.swift */; };
+		6ED674B32AB71DCA002E3969 /* exchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED674B22AB71DCA002E3969 /* exchangeRateViewController.swift */; };
+		6ED674B52AB71DEF002E3969 /* exchangeRateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED674B42AB71DEF002E3969 /* exchangeRateTableViewCell.swift */; };
+		6ED674B72AB732F9002E3969 /* exchangeRateProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED674B62AB732F9002E3969 /* exchangeRateProtocols.swift */; };
+		6ED674B92AB73301002E3969 /* exchangeRateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED674B82AB73301002E3969 /* exchangeRateRouter.swift */; };
+		6ED674BB2AB7330A002E3969 /* exchangeRateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED674BA2AB7330A002E3969 /* exchangeRateInteractor.swift */; };
+		6ED674BD2AB73313002E3969 /* exchangeRatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED674BC2AB73313002E3969 /* exchangeRatePresenter.swift */; };
 		6EE72A422AAA42EB002D2337 /* detailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE72A412AAA42EB002D2337 /* detailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +73,13 @@
 		6E577EDD2AA8D6120033BA06 /* homepageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageTableViewCell.swift; sourceTree = "<group>"; };
 		6E6942C42AADF517006035A2 /* wallet.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = wallet.sqlite; sourceTree = "<group>"; };
 		6EA7C8722AA8D14600C2E729 /* homepageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageProtocols.swift; sourceTree = "<group>"; };
+		6ED674A82AB71C67002E3969 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		6ED674B22AB71DCA002E3969 /* exchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeRateViewController.swift; sourceTree = "<group>"; };
+		6ED674B42AB71DEF002E3969 /* exchangeRateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeRateTableViewCell.swift; sourceTree = "<group>"; };
+		6ED674B62AB732F9002E3969 /* exchangeRateProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeRateProtocols.swift; sourceTree = "<group>"; };
+		6ED674B82AB73301002E3969 /* exchangeRateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeRateRouter.swift; sourceTree = "<group>"; };
+		6ED674BA2AB7330A002E3969 /* exchangeRateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeRateInteractor.swift; sourceTree = "<group>"; };
+		6ED674BC2AB73313002E3969 /* exchangeRatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeRatePresenter.swift; sourceTree = "<group>"; };
 		6EE72A412AAA42EB002D2337 /* detailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,8 +116,10 @@
 				6E6942C42AADF517006035A2 /* wallet.sqlite */,
 				6E41318C2AA8CF95002E4343 /* AppDelegate.swift */,
 				6E41318E2AA8CF95002E4343 /* SceneDelegate.swift */,
+				6ED674A72AB71C3C002E3969 /* Service */,
 				6EA7C86C2AA8D0AF00C2E729 /* homepage-module */,
 				6E561C622AA9C806003719F9 /* detail-module */,
+				6ED674AB2AB71D3D002E3969 /* exchangeRate-module */,
 				6E577EC82AA8D24D0033BA06 /* Entity */,
 				6E4131922AA8CF95002E4343 /* Main.storyboard */,
 				6E4131952AA8CF96002E4343 /* Assets.xcassets */,
@@ -247,6 +263,75 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
+		6ED674A72AB71C3C002E3969 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6ED674A82AB71C67002E3969 /* Webservice.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6ED674AB2AB71D3D002E3969 /* exchangeRate-module */ = {
+			isa = PBXGroup;
+			children = (
+				6ED674AC2AB71D60002E3969 /* tableViewCell */,
+				6ED674B12AB71D8E002E3969 /* protocols */,
+				6ED674B02AB71D87002E3969 /* router */,
+				6ED674AF2AB71D7D002E3969 /* interactor */,
+				6ED674AE2AB71D77002E3969 /* presenter */,
+				6ED674AD2AB71D70002E3969 /* view */,
+			);
+			path = "exchangeRate-module";
+			sourceTree = "<group>";
+		};
+		6ED674AC2AB71D60002E3969 /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6ED674B42AB71DEF002E3969 /* exchangeRateTableViewCell.swift */,
+			);
+			path = tableViewCell;
+			sourceTree = "<group>";
+		};
+		6ED674AD2AB71D70002E3969 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6ED674B22AB71DCA002E3969 /* exchangeRateViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		6ED674AE2AB71D77002E3969 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6ED674BC2AB73313002E3969 /* exchangeRatePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		6ED674AF2AB71D7D002E3969 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6ED674BA2AB7330A002E3969 /* exchangeRateInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		6ED674B02AB71D87002E3969 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				6ED674B82AB73301002E3969 /* exchangeRateRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		6ED674B12AB71D8E002E3969 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6ED674B62AB732F9002E3969 /* exchangeRateProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
 		6EE72A402AAA42D7002D2337 /* tableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,18 +421,25 @@
 				6E41318D2AA8CF95002E4343 /* AppDelegate.swift in Sources */,
 				6E577EDA2AA8D2DC0033BA06 /* FMDatabase.m in Sources */,
 				6E41318F2AA8CF95002E4343 /* SceneDelegate.swift in Sources */,
+				6ED674A92AB71C67002E3969 /* Webservice.swift in Sources */,
 				6E577EDE2AA8D6120033BA06 /* homepageTableViewCell.swift in Sources */,
 				6E561C6D2AA9C873003719F9 /* detailInteractor.swift in Sources */,
 				6E577ECA2AA8D2560033BA06 /* Entity.swift in Sources */,
+				6ED674B32AB71DCA002E3969 /* exchangeRateViewController.swift in Sources */,
 				6E577EC52AA8D1F10033BA06 /* homepageInteractor.swift in Sources */,
+				6ED674B52AB71DEF002E3969 /* exchangeRateTableViewCell.swift in Sources */,
 				6E561C6F2AA9C87C003719F9 /* detailPresenter.swift in Sources */,
 				6E577ED72AA8D2DC0033BA06 /* FMResultSet.m in Sources */,
 				6EE72A422AAA42EB002D2337 /* detailTableViewCell.swift in Sources */,
+				6ED674BD2AB73313002E3969 /* exchangeRatePresenter.swift in Sources */,
+				6ED674B72AB732F9002E3969 /* exchangeRateProtocols.swift in Sources */,
+				6ED674B92AB73301002E3969 /* exchangeRateRouter.swift in Sources */,
 				6E577EDB2AA8D2DC0033BA06 /* FMDatabaseAdditions.m in Sources */,
 				6E577ED82AA8D2DC0033BA06 /* FMDatabasePool.m in Sources */,
 				6E577ED92AA8D2DC0033BA06 /* FMDatabaseQueue.m in Sources */,
 				6E577EC32AA8D1AE0033BA06 /* homepageRouter.swift in Sources */,
 				6E577EC72AA8D2120033BA06 /* homepagePresenter.swift in Sources */,
+				6ED674BB2AB7330A002E3969 /* exchangeRateInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

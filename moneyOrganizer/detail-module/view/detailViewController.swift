@@ -34,13 +34,6 @@ class detailViewController: UIViewController {
         detailTableView.dataSource = self
         detailTableView.delegate = self
         
-        let customBackButtonImage = UIImage(named: "backButton")
-        let customBackButtonMaskImage = UIImage(named: "backButton")
-        navigationController?.navigationBar.backIndicatorImage = customBackButtonImage
-        navigationController?.navigationBar.backIndicatorTransitionMaskImage = customBackButtonMaskImage
-        navigationController?.navigationBar.tintColor = .black
-        navigationController?.navigationBar.topItem?.backButtonTitle = ""
-        
         detailImage.image = UIImage(named: "detailBack")
         dateImage.image = UIImage(named: "dateImage")
         
@@ -95,7 +88,7 @@ extension detailViewController: PresenterToViewDetailProtocol {
     
     func sendTotalMoneyView(totalMoney: Int) {
         
-        self.totalMoneyLabel.text =  "$ " + String(totalMoney)
+        self.totalMoneyLabel.text =  "€ " + String(totalMoney)
     }
     
     func sendRecentActivitiesView(recentActivities: String) {
@@ -116,7 +109,7 @@ extension detailViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.dateLabel.text = part.date
         cell.explanationLabel.text = "Explanation : \(part.activity ?? "-")"
-        cell.transactionLabel.text = part.price! + "$" 
+        cell.transactionLabel.text = part.price! + "€"
         return cell
     }
     

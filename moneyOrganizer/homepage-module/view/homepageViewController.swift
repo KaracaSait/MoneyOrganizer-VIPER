@@ -34,6 +34,13 @@ class homepageViewController: UIViewController {
         homepageTableView.dataSource = self
         homepageTableView.delegate = self
         
+        let customBackButtonImage = UIImage(named: "backButton")
+        let customBackButtonMaskImage = UIImage(named: "backButton")
+        navigationController?.navigationBar.backIndicatorImage = customBackButtonImage
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = customBackButtonMaskImage
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+        navigationController?.navigationBar.tintColor = .black
+        
         graphicView.backgroundColor = .clear
         graphicBackground.image = UIImage(named: "graphicBackground")
         
@@ -127,18 +134,18 @@ extension homepageViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-            cell.moneyLabel.text = self.bankAccountMoney! + " $"
+            cell.moneyLabel.text = self.bankAccountMoney! + " €"
             switch bankAccount.count{
             case 1:
                 cell.process1.text = bankAccount[0].activity
-                cell.price1.text = bankAccount[0].price! + " $"
+                cell.price1.text = bankAccount[0].price! + " €"
                 cell.process2.text = ""
                 cell.price2.text = ""
             case 2:
                 cell.process1.text = bankAccount[0].activity
-                cell.price1.text = bankAccount[0].price! + " $"
+                cell.price1.text = bankAccount[0].price! + " €"
                 cell.process2.text = bankAccount[1].activity
-                cell.price2.text = bankAccount[1].price! + " $"
+                cell.price2.text = bankAccount[1].price! + " €"
             default :
                 cell.process1.text = "No Activity"
                 cell.price1.text = ""
@@ -146,18 +153,18 @@ extension homepageViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.price2.text = ""
             }
         case 1:
-            cell.moneyLabel.text = self.cashAccountMoney! + " $"
+            cell.moneyLabel.text = self.cashAccountMoney! + " €"
             switch cashAccount.count{
             case 1:
                 cell.process1.text = cashAccount[0].activity
-                cell.price1.text = cashAccount[0].price! + " $"
+                cell.price1.text = cashAccount[0].price! + " €"
                 cell.process2.text = ""
                 cell.price2.text = ""
             case 2:
                 cell.process1.text = cashAccount[0].activity
-                cell.price1.text = cashAccount[0].price! + " $"
+                cell.price1.text = cashAccount[0].price! + " €"
                 cell.process2.text = cashAccount[1].activity
-                cell.price2.text = cashAccount[1].price! + " $"
+                cell.price2.text = cashAccount[1].price! + " €"
             default :
                 cell.process1.text = "No Activity"
                 cell.price1.text = ""
@@ -165,18 +172,18 @@ extension homepageViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.price2.text = ""
             }
         case 2:
-            cell.moneyLabel.text = self.creditAccountMoney! + " $"
+            cell.moneyLabel.text = self.creditAccountMoney! + " €"
             switch creditAccount.count{
             case 1:
                 cell.process1.text = creditAccount[0].activity
-                cell.price1.text = creditAccount[0].price! + " $"
+                cell.price1.text = creditAccount[0].price! + " €"
                 cell.process2.text = ""
                 cell.price2.text = ""
             case 2:
                 cell.process1.text = creditAccount[0].activity
-                cell.price1.text = creditAccount[0].price! + " $"
+                cell.price1.text = creditAccount[0].price! + " €"
                 cell.process2.text = creditAccount[1].activity
-                cell.price2.text = creditAccount[1].price! + " $"
+                cell.price2.text = creditAccount[1].price! + " €"
             default :
                 cell.process1.text = "No Activity"
                 cell.price1.text = ""

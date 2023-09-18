@@ -190,7 +190,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Accounts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ako-ez-bVC">
-                                <rect key="frame" x="20" y="363" width="353" height="30"/>
+                                <rect key="frame" x="20" y="363" width="158.66666666666666" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="tYM-4R-kPG"/>
                                 </constraints>
@@ -231,6 +231,14 @@
                                     <constraint firstAttribute="height" constant="25" id="mfK-fr-ajO"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGX-ad-jBH">
+                                <rect key="frame" x="298" y="363" width="75" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="exchangeRateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="diZ-Hk-ZAU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -253,34 +261,34 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="19g-Jj-5ls" secondAttribute="trailing" constant="20" id="XfD-Lq-0QW"/>
                             <constraint firstItem="19g-Jj-5ls" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xyk-oI-N6Y"/>
                             <constraint firstItem="0OW-AF-WFP" firstAttribute="top" secondItem="yaD-Q1-dBL" secondAttribute="bottom" constant="5" id="Z3h-Cp-e6l"/>
+                            <constraint firstItem="EGX-ad-jBH" firstAttribute="top" secondItem="HWp-Z8-72l" secondAttribute="bottom" constant="15" id="ZaA-En-1l3"/>
                             <constraint firstItem="BI5-Hs-tYz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="cCz-a0-ihR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EGX-ad-jBH" secondAttribute="trailing" constant="20" id="enn-49-LY2"/>
                             <constraint firstItem="19g-Jj-5ls" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="fXD-0Z-zF1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BI5-Hs-tYz" secondAttribute="trailing" constant="80" id="hGP-68-Up0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ako-ez-bVC" secondAttribute="trailing" constant="20" id="ia0-iI-FDQ"/>
                             <constraint firstItem="ako-ez-bVC" firstAttribute="top" secondItem="0OW-AF-WFP" secondAttribute="bottom" constant="50" id="jsp-Mh-WSN"/>
+                            <constraint firstItem="EGX-ad-jBH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ako-ez-bVC" secondAttribute="trailing" constant="20" id="lAh-L6-ahD"/>
                             <constraint firstItem="ako-ez-bVC" firstAttribute="top" secondItem="HWp-Z8-72l" secondAttribute="bottom" constant="15" id="mBG-P7-mqd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HWp-Z8-72l" secondAttribute="trailing" constant="20" id="ngU-Ia-BwE"/>
                             <constraint firstItem="ako-ez-bVC" firstAttribute="top" secondItem="BI5-Hs-tYz" secondAttribute="bottom" constant="25" id="vAF-ye-Eee"/>
                             <constraint firstItem="BI5-Hs-tYz" firstAttribute="top" secondItem="19g-Jj-5ls" secondAttribute="bottom" constant="25" id="wFf-Kl-QR6"/>
                             <constraint firstItem="Olo-L2-QhS" firstAttribute="leading" secondItem="BI5-Hs-tYz" secondAttribute="trailing" constant="10" id="yye-Ah-Vgd"/>
+                            <constraint firstItem="dkW-Pb-P8E" firstAttribute="top" secondItem="EGX-ad-jBH" secondAttribute="bottom" constant="10" id="zjt-mq-wRR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rna-WN-p4M">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="gearshape" catalog="system" id="K6V-8e-fAE">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="dollarsign" catalog="system" id="soQ-PS-9ze">
-                            <connections>
-                                <segue destination="WEs-GU-mn2" kind="show" id="qEP-6j-W2h"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="exchangeRateButtonImage" destination="EGX-ad-jBH" id="Ul7-9F-J6H"/>
                         <outlet property="graphicBackground" destination="HWp-Z8-72l" id="Mcm-ZB-Lb9"/>
                         <outlet property="graphicView" destination="BI5-Hs-tYz" id="ukD-I4-ab1"/>
                         <outlet property="helloLabel" destination="19g-Jj-5ls" id="0Fi-sf-uhB"/>
                         <outlet property="homepageTableView" destination="dkW-Pb-P8E" id="IIY-B7-VjC"/>
                         <segue destination="9p2-oK-32v" kind="show" identifier="homepageToDetail" id="v7k-oE-ESg"/>
+                        <segue destination="WEs-GU-mn2" kind="show" identifier="toExchangeRate" id="xf2-9n-61Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -503,7 +511,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dollarsign" catalog="system" width="89" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="rectangle1" width="15" height="15"/>
         <image name="rectangle2" width="15" height="15"/>

@@ -19,9 +19,8 @@ class exchangeRatePresenter: ViewToPresenterExchangeRateProtocol {
 
 extension exchangeRatePresenter : InteractorToPresenterExchangeRateProtocol {
     
-    func sendPresenterCurrenciesList(list:[String : Double]) {
+    func sendPresenterCurrenciesList(list:[Dictionary<String, Double>.Element]) {
         exchangeRateView?.sendViewCurrenciesList(list: list)
     }
-    
     
 }

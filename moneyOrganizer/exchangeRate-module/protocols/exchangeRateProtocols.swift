@@ -28,14 +28,13 @@ protocol PresenterToInteractorExchangeRateProtocol {
 
 protocol InteractorToPresenterExchangeRateProtocol {
     
-    func sendPresenterCurrenciesList(list:[String : Double])
+    func sendPresenterCurrenciesList(list:[Dictionary<String, Double>.Element])
     
 }
 
 protocol PresenterToViewExchangeRateProtocol {
    
-    func sendViewCurrenciesList(list:[String : Double])
-    
+    func sendViewCurrenciesList(list:[Dictionary<String, Double>.Element])
 }
 
 // Authorization Protocol

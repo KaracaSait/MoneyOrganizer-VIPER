@@ -10,8 +10,9 @@ import UIKit
 class exchangeRateViewController: UIViewController {
     
     var exchangeRatePresenterObject : ViewToPresenterExchangeRateProtocol?
-    var exchangeRateList = [String:Double]()
-
+    var exchangeRateList = [Dictionary<String, Double>.Element]()
+    let activityIndicator = UIActivityIndicatorView(style: .large)
+    
     @IBOutlet weak var exchangeRateTableView: UITableView!
     
     override func viewDidLoad() {
@@ -22,7 +23,11 @@ class exchangeRateViewController: UIViewController {
         exchangeRateTableView.dataSource = self
         exchangeRateTableView.delegate = self
     
-        
+        activityIndicator.color = .gray
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,10 +38,11 @@ class exchangeRateViewController: UIViewController {
 
 extension exchangeRateViewController: PresenterToViewExchangeRateProtocol {
     
-    func sendViewCurrenciesList(list: [String : Double]) {
+    func sendViewCurrenciesList(list:[Dictionary<String, Double>.Element]) {
         exchangeRateList = list
         DispatchQueue.main.async {
             self.exchangeRateTableView.reloadData()
+            self.activityIndicator.stopAnimating()
         }
     }
     
@@ -49,14 +55,11 @@ extension exchangeRateViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let keys = Array(exchangeRateList.keys)
-        let partKeys = keys[indexPath.row]
-        let values = Array(exchangeRateList.values)
-        let partValues = values[indexPath.row]
-        
+        let part = exchangeRateList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "exchangeRateCell", for: indexPath) as! exchangeRateTableViewCell
-        cell.rateName.text = partKeys
-        cell.ratePrice.text = String(partValues)
+        cell.rateName.text = part.key
+        cell.ratePrice.text = String(part.value)
+        
         return cell
     }
     

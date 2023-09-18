@@ -15,6 +15,7 @@ class homepageViewController: UIViewController {
     @IBOutlet weak var graphicView: BarChartView!
     @IBOutlet weak var graphicBackground: UIImageView!
     @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var exchangeRateButtonImage: UIButton!
     
     var AccountList = [accounts]()
     
@@ -44,6 +45,11 @@ class homepageViewController: UIViewController {
         graphicView.backgroundColor = .clear
         graphicBackground.image = UIImage(named: "graphicBackground")
         
+        exchangeRateButtonImage.setTitle("", for: .normal)
+        exchangeRateButtonImage.setImage(UIImage(named: "exchangeRateIcon"), for: .normal)
+        exchangeRateButtonImage.setImage(UIImage(named: "exchangeRateIconPush"), for: .highlighted)
+        view.addSubview(exchangeRateButtonImage)
+        
         helloLabel.text = "Hello, King!"
         
         veritabaniKopyala()
@@ -66,6 +72,10 @@ class homepageViewController: UIViewController {
             let targetVC = segue.destination as! detailViewController
             targetVC.whichAccount = AccountList[index!]
         }
+    }
+    
+    @IBAction func exchangeRateButton(_ sender: Any) {
+        performSegue(withIdentifier: "toExchangeRate", sender: nil)
     }
     
     func veritabaniKopyala() {

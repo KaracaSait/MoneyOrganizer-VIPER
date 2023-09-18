@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "graphicBackground.png",
+      "filename" : "exchangeRateIconPush.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "graphicBackground@2x.png",
+      "filename" : "exchangeRateIconPush@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "graphicBackground@3x.png",
+      "filename" : "exchangeRateIconPush@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

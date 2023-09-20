@@ -13,6 +13,7 @@ class exchangeRateViewController: UIViewController {
     var exchangeRateList = [Dictionary<String, Double>.Element]()
     let activityIndicator = UIActivityIndicatorView(style: .large)
     
+    @IBOutlet weak var backButtonImage: UIBarButtonItem!
     @IBOutlet weak var exchangeRateTableView: UITableView!
     
     override func viewDidLoad() {
@@ -28,12 +29,18 @@ class exchangeRateViewController: UIViewController {
         activityIndicator.hidesWhenStopped = true
         view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
+        
+        backButtonImage.image = UIImage(named: "backButton")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         exchangeRatePresenterObject?.readCurrencies()
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 extension exchangeRateViewController: PresenterToViewExchangeRateProtocol {

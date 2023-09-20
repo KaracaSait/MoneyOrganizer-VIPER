@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mwh-uC-F7M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mwh-uC-F7M">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="UnicaOne-Regular.ttf">
+            <string>UnicaOne-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Exchange Rate View Controller-->
         <scene sceneID="Xak-3i-1Y6">
@@ -29,14 +35,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IT-cv-tmS">
-                                                    <rect key="frame" x="30" y="52" width="333" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="30" y="51" width="333" height="20"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJd-1W-oTH">
-                                                    <rect key="frame" x="30" y="21" width="333" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="30" y="21" width="333" height="20"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -67,8 +73,16 @@
                             <constraint firstItem="Epi-RT-9yn" firstAttribute="trailing" secondItem="Wu0-zE-Za8" secondAttribute="trailing" id="dSc-6D-f7A"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JvK-MU-FJd"/>
+                    <navigationItem key="navigationItem" id="JvK-MU-FJd">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="2Dr-5w-dTA">
+                            <color key="tintColor" name="tintColor1"/>
+                            <connections>
+                                <action selector="backButton:" destination="WEs-GU-mn2" id="laC-tj-qBg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="backButtonImage" destination="2Dr-5w-dTA" id="aEd-9a-p1u"/>
                         <outlet property="exchangeRateTableView" destination="Wu0-zE-Za8" id="PRU-MJ-Fjq"/>
                     </connections>
                 </viewController>
@@ -95,49 +109,49 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="259"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YVt-Iw-zXP">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YVt-Iw-zXP">
                                                     <rect key="frame" x="20" y="11" width="353" height="237"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0k3-Rc-5V1">
-                                                    <rect key="frame" x="40" y="149" width="313" height="27.333333333333343"/>
-                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="24"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="40" y="146.33333333333334" width="313" height="28.666666666666657"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="24"/>
+                                                    <color key="textColor" name="textColor1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k51-hh-5PD">
-                                                    <rect key="frame" x="40" y="186.33333333333334" width="48.333333333333343" height="18.333333333333343"/>
-                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="16"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="40" y="185" width="36.333333333333343" height="19"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="16"/>
+                                                    <color key="textColor" name="textColor1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXx-49-qqn">
-                                                    <rect key="frame" x="40" y="209.66666666666666" width="48.333333333333343" height="18.333333333333343"/>
-                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="16"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="40" y="209" width="36.333333333333343" height="19"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="16"/>
+                                                    <color key="textColor" name="textColor1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r53-fM-vEt">
-                                                    <rect key="frame" x="304.66666666666669" y="186.33333333333334" width="48.333333333333314" height="18.333333333333343"/>
-                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="16"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="316.66666666666669" y="185" width="36.333333333333314" height="19"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="16"/>
+                                                    <color key="textColor" name="textColor1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmI-wB-UzB">
-                                                    <rect key="frame" x="304.66666666666669" y="209.66666666666666" width="48.333333333333314" height="18.333333333333343"/>
-                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="16"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="316.66666666666669" y="209" width="36.333333333333314" height="19"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="16"/>
+                                                    <color key="textColor" name="textColor1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5z-0x-E5Q">
-                                                    <rect key="frame" x="40" y="31" width="313" height="27.333333333333329"/>
-                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="24"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="40" y="31" width="313" height="28.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="24"/>
+                                                    <color key="textColor" name="textColor1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qit-Bu-yp2">
-                                                    <rect key="frame" x="40" y="68.333333333333329" width="313" height="41"/>
-                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="36"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="40" y="69.666666666666671" width="313" height="42.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="36"/>
+                                                    <color key="textColor" name="textColor1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -185,16 +199,16 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="P9w-Xl-5Ty"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Accounts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ako-ez-bVC">
-                                <rect key="frame" x="20" y="363" width="158.66666666666666" height="30"/>
+                                <rect key="frame" x="20.000000000000007" y="363" width="125.66666666666669" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="tYM-4R-kPG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -205,26 +219,26 @@
                                 <rect key="frame" x="30" y="168" width="283" height="170"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle2" translatesAutoresizingMaskIntoConstraints="NO" id="yaD-Q1-dBL">
-                                <rect key="frame" x="333" y="271.66666666666669" width="25" height="25"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yaD-Q1-dBL">
+                                <rect key="frame" x="333" y="271" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="8FW-kt-oNQ"/>
                                     <constraint firstAttribute="width" constant="25" id="Zww-XI-R5Y"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olo-L2-QhS">
-                                <rect key="frame" x="323" y="223" width="50" height="11.333333333333343"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="10"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="323" y="223" width="50" height="12"/>
+                                <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="10"/>
+                                <color key="textColor" name="textColor1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OW-AF-WFP">
-                                <rect key="frame" x="323" y="301.66666666666669" width="50" height="11.333333333333314"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="10"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="323" y="301" width="50" height="12"/>
+                                <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="10"/>
+                                <color key="textColor" name="textColor1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle1" translatesAutoresizingMaskIntoConstraints="NO" id="Pc3-Y7-Oty">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pc3-Y7-Oty">
                                 <rect key="frame" x="333" y="193" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="9Og-oW-Svk"/>
@@ -278,15 +292,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="rna-WN-p4M">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="gearshape" catalog="system" id="K6V-8e-fAE">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" name="tintColor1"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="exchangeRateButtonImage" destination="EGX-ad-jBH" id="Ul7-9F-J6H"/>
+                        <outlet property="expenseImage" destination="yaD-Q1-dBL" id="eKf-Oz-Iai"/>
                         <outlet property="graphicBackground" destination="HWp-Z8-72l" id="Mcm-ZB-Lb9"/>
                         <outlet property="graphicView" destination="BI5-Hs-tYz" id="ukD-I4-ab1"/>
                         <outlet property="helloLabel" destination="19g-Jj-5ls" id="0Fi-sf-uhB"/>
                         <outlet property="homepageTableView" destination="dkW-Pb-P8E" id="IIY-B7-VjC"/>
+                        <outlet property="incomeImage" destination="Pc3-Y7-Oty" id="ODs-dG-wUw"/>
                         <segue destination="9p2-oK-32v" kind="show" identifier="homepageToDetail" id="v7k-oE-ESg"/>
                         <segue destination="WEs-GU-mn2" kind="show" identifier="toExchangeRate" id="xf2-9n-61Q"/>
                     </connections>
@@ -309,43 +325,21 @@
                                     <constraint firstAttribute="height" constant="250" id="g63-Rs-7CG"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlj-Jr-DlF">
-                                <rect key="frame" x="50" y="293" width="75" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="AEL-k9-8al"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="minusButtonAction:" destination="9p2-oK-32v" eventType="touchUpInside" id="5Tv-nA-DRl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lj5-Tg-dKZ">
-                                <rect key="frame" x="268" y="293" width="75" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="zwb-mP-Ymh"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="plusButtonAction:" destination="9p2-oK-32v" eventType="touchUpInside" id="Yhd-QU-Vpq"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62L-EE-y8A">
-                                <rect key="frame" x="75" y="373" width="41" height="20"/>
+                                <rect key="frame" x="75" y="373" width="32.333333333333343" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="SDX-3h-4V2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEP-Tf-tCo">
-                                <rect key="frame" x="260.66666666666669" y="373" width="112.33333333333331" height="20"/>
+                                <rect key="frame" x="288" y="373" width="85" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="gd2-Da-vx8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -360,25 +354,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uhr-Uj-hhr">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uhr-Uj-hhr">
                                                     <rect key="frame" x="25" y="11" width="343" height="127"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d08-MI-oUx">
-                                                    <rect key="frame" x="40" y="31" width="51.666666666666657" height="20"/>
-                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="40" y="31" width="38.333333333333343" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="17"/>
+                                                    <color key="textColor" name="textColor1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrc-ZL-cMO">
-                                                    <rect key="frame" x="40" y="71" width="313" height="19.333333333333329"/>
-                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="40" y="71.333333333333329" width="313" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="17"/>
+                                                    <color key="textColor" name="textColor1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcf-iw-aqK">
-                                                    <rect key="frame" x="301.66666666666669" y="31" width="51.333333333333314" height="20"/>
-                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="314.66666666666669" y="31" width="38.333333333333314" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="17"/>
+                                                    <color key="textColor" name="textColor1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -407,76 +401,108 @@
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8N2-cW-sxa">
-                                <rect key="frame" x="121" y="373" width="20" height="20"/>
+                                <rect key="frame" x="112.33333333333333" y="373" width="19.999999999999986" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="3GP-CQ-drv"/>
                                     <constraint firstAttribute="height" constant="20" id="3Pc-aM-vhW"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0I-9r-Dtf">
-                                <rect key="frame" x="30" y="123.00000000000001" width="333" height="27.666666666666671"/>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="24"/>
+                                <rect key="frame" x="30" y="123.00000000000001" width="333" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUf-FB-1bF">
-                                <rect key="frame" x="30" y="180.66666666666666" width="333" height="28"/>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="24"/>
+                                <rect key="frame" x="30" y="171.66666666666666" width="333" height="42.666666666666657"/>
+                                <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3n-t6-SKw">
-                                <rect key="frame" x="30" y="224" width="333" height="28"/>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="24"/>
+                                <rect key="frame" x="30" y="222.66666666666666" width="333" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5e-ct-9j1">
-                                <rect key="frame" x="30" y="257" width="333" height="16"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="14"/>
+                                <rect key="frame" x="30" y="256.33333333333331" width="333" height="16.666666666666686"/>
+                                <fontDescription key="fontDescription" name="UnicaOne-Regular" family="Unica One" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlj-Jr-DlF">
+                                <rect key="frame" x="50" y="293" width="110" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LCn-Mh-ovd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="minusButtonAction:" destination="9p2-oK-32v" eventType="touchUpInside" id="5Tv-nA-DRl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lj5-Tg-dKZ">
+                                <rect key="frame" x="233" y="293" width="110" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uaW-zk-GIl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="plusButtonAction:" destination="9p2-oK-32v" eventType="touchUpInside" id="Yhd-QU-Vpq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y06-21-xt8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Sz8-Vt-zt8" firstAttribute="top" secondItem="Y06-21-xt8" secondAttribute="top" constant="300" id="0PE-Um-698"/>
-                            <constraint firstItem="Rlj-Jr-DlF" firstAttribute="leading" secondItem="Y06-21-xt8" secondAttribute="leading" constant="50" id="2mV-fp-uLt"/>
+                            <constraint firstItem="lj5-Tg-dKZ" firstAttribute="leading" secondItem="Y06-21-xt8" secondAttribute="leading" constant="233" id="6iu-8d-q37"/>
                             <constraint firstItem="c3n-t6-SKw" firstAttribute="leading" secondItem="Y06-21-xt8" secondAttribute="leading" constant="30" id="8eX-X5-yeC"/>
-                            <constraint firstItem="RUf-FB-1bF" firstAttribute="top" secondItem="h0I-9r-Dtf" secondAttribute="bottom" constant="30" id="9Tk-Qv-GCd"/>
+                            <constraint firstItem="RUf-FB-1bF" firstAttribute="top" secondItem="h0I-9r-Dtf" secondAttribute="bottom" constant="20" id="9Tk-Qv-GCd"/>
                             <constraint firstItem="Sz8-Vt-zt8" firstAttribute="top" secondItem="8N2-cW-sxa" secondAttribute="bottom" constant="10" id="9rs-Cj-Poj"/>
                             <constraint firstItem="Y06-21-xt8" firstAttribute="trailing" secondItem="RUf-FB-1bF" secondAttribute="trailing" constant="30" id="B6w-9R-qn6"/>
                             <constraint firstItem="h0I-9r-Dtf" firstAttribute="top" secondItem="Y06-21-xt8" secondAttribute="top" constant="20" id="CtO-V4-iPj"/>
                             <constraint firstItem="8N2-cW-sxa" firstAttribute="leading" secondItem="62L-EE-y8A" secondAttribute="trailing" constant="5" id="EsZ-nm-3Lg"/>
-                            <constraint firstItem="aEP-Tf-tCo" firstAttribute="top" secondItem="lj5-Tg-dKZ" secondAttribute="bottom" constant="30" id="FgS-cP-7td"/>
                             <constraint firstItem="E5e-ct-9j1" firstAttribute="leading" secondItem="Y06-21-xt8" secondAttribute="leading" constant="30" id="FzR-1E-417"/>
                             <constraint firstItem="Sz8-Vt-zt8" firstAttribute="top" secondItem="62L-EE-y8A" secondAttribute="bottom" constant="10" id="IrC-kK-IY5"/>
+                            <constraint firstItem="lj5-Tg-dKZ" firstAttribute="top" secondItem="E5e-ct-9j1" secondAttribute="bottom" constant="20" id="Jn4-JU-Ngh"/>
+                            <constraint firstItem="Rlj-Jr-DlF" firstAttribute="leading" secondItem="Y06-21-xt8" secondAttribute="leading" constant="50" id="K7x-sq-OGg"/>
                             <constraint firstItem="Y06-21-xt8" firstAttribute="bottom" secondItem="Sz8-Vt-zt8" secondAttribute="bottom" id="OWi-ut-mYe"/>
                             <constraint firstItem="Sz8-Vt-zt8" firstAttribute="leading" secondItem="Y06-21-xt8" secondAttribute="leading" id="QBS-eH-xkN"/>
-                            <constraint firstItem="8N2-cW-sxa" firstAttribute="top" secondItem="Rlj-Jr-DlF" secondAttribute="bottom" constant="30" id="RHw-9H-9RV"/>
-                            <constraint firstItem="lj5-Tg-dKZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rlj-Jr-DlF" secondAttribute="trailing" constant="8" symbolic="YES" id="TeF-DT-1e2"/>
                             <constraint firstItem="62L-EE-y8A" firstAttribute="leading" secondItem="Y06-21-xt8" secondAttribute="leading" constant="75" id="VQm-35-Mvu"/>
                             <constraint firstItem="Mks-w1-bJK" firstAttribute="leading" secondItem="Y06-21-xt8" secondAttribute="leading" constant="5" id="WBU-6u-cvw"/>
                             <constraint firstItem="Y06-21-xt8" firstAttribute="trailing" secondItem="h0I-9r-Dtf" secondAttribute="trailing" constant="30" id="Xim-hn-fvm"/>
+                            <constraint firstItem="62L-EE-y8A" firstAttribute="top" secondItem="Rlj-Jr-DlF" secondAttribute="bottom" constant="30" id="Xzg-qp-RkS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rlj-Jr-DlF" secondAttribute="trailing" constant="217" id="ZK4-wm-UcY"/>
                             <constraint firstItem="Y06-21-xt8" firstAttribute="trailing" secondItem="Mks-w1-bJK" secondAttribute="trailing" constant="5" id="ZSt-3U-aUV"/>
                             <constraint firstItem="Y06-21-xt8" firstAttribute="trailing" secondItem="Sz8-Vt-zt8" secondAttribute="trailing" id="cdj-hc-gLa"/>
-                            <constraint firstItem="Rlj-Jr-DlF" firstAttribute="top" secondItem="E5e-ct-9j1" secondAttribute="bottom" constant="20" id="ceX-Us-xUN"/>
                             <constraint firstItem="Y06-21-xt8" firstAttribute="trailing" secondItem="c3n-t6-SKw" secondAttribute="trailing" constant="30" id="d1r-xW-0P9"/>
                             <constraint firstItem="Sz8-Vt-zt8" firstAttribute="top" secondItem="aEP-Tf-tCo" secondAttribute="bottom" constant="10" id="dPy-VH-Xkx"/>
                             <constraint firstItem="h0I-9r-Dtf" firstAttribute="leading" secondItem="Y06-21-xt8" secondAttribute="leading" constant="30" id="e2i-dF-grC"/>
                             <constraint firstItem="RUf-FB-1bF" firstAttribute="leading" secondItem="Y06-21-xt8" secondAttribute="leading" constant="30" id="ene-q7-TvO"/>
+                            <constraint firstItem="Rlj-Jr-DlF" firstAttribute="top" secondItem="E5e-ct-9j1" secondAttribute="bottom" constant="20" id="gZU-bY-zFo"/>
                             <constraint firstItem="Mks-w1-bJK" firstAttribute="top" secondItem="Y06-21-xt8" secondAttribute="top" constant="5" id="jn7-IL-BeV"/>
-                            <constraint firstItem="Y06-21-xt8" firstAttribute="trailing" secondItem="lj5-Tg-dKZ" secondAttribute="trailing" constant="50" id="qwt-Ch-jq5"/>
                             <constraint firstItem="Y06-21-xt8" firstAttribute="trailing" secondItem="aEP-Tf-tCo" secondAttribute="trailing" constant="20" id="rH6-ke-Gs1"/>
+                            <constraint firstAttribute="trailing" secondItem="lj5-Tg-dKZ" secondAttribute="trailing" constant="50" id="rNP-zP-rKO"/>
                             <constraint firstItem="aEP-Tf-tCo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8N2-cW-sxa" secondAttribute="trailing" constant="8" symbolic="YES" id="sCe-A8-usC"/>
                             <constraint firstItem="Y06-21-xt8" firstAttribute="trailing" secondItem="E5e-ct-9j1" secondAttribute="trailing" constant="30" id="wYn-As-nhw"/>
                             <constraint firstItem="E5e-ct-9j1" firstAttribute="top" secondItem="c3n-t6-SKw" secondAttribute="bottom" constant="5" id="xvg-MI-DvC"/>
+                            <constraint firstItem="aEP-Tf-tCo" firstAttribute="top" secondItem="lj5-Tg-dKZ" secondAttribute="bottom" constant="30" id="yNS-U3-f7Y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xzj-9u-y6Y"/>
+                    <navigationItem key="navigationItem" id="xzj-9u-y6Y">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Mv1-G5-MTA">
+                            <color key="tintColor" name="tintColor1"/>
+                            <connections>
+                                <action selector="backButton:" destination="9p2-oK-32v" id="4Kz-LB-qFE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="accountLabel" destination="h0I-9r-Dtf" id="Myf-fo-JmD"/>
+                        <outlet property="backButtonImage" destination="Mv1-G5-MTA" id="TjD-PF-LgD"/>
                         <outlet property="dateImage" destination="8N2-cW-sxa" id="FmX-6O-AUj"/>
                         <outlet property="detailImage" destination="Mks-w1-bJK" id="n1f-0n-CDz"/>
                         <outlet property="detailTableView" destination="Sz8-Vt-zt8" id="1IS-c9-OHU"/>
@@ -512,8 +538,12 @@
     </scenes>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
-        <image name="rectangle1" width="15" height="15"/>
-        <image name="rectangle2" width="15" height="15"/>
+        <namedColor name="textColor1">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tintColor1">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E1DC1742AB9196D006C92D9 /* UnicaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DC1732AB9196D006C92D9 /* UnicaOne-Regular.ttf */; };
 		6E41318D2AA8CF95002E4343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41318C2AA8CF95002E4343 /* AppDelegate.swift */; };
 		6E41318F2AA8CF95002E4343 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41318E2AA8CF95002E4343 /* SceneDelegate.swift */; };
 		6E4131912AA8CF95002E4343 /* homepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4131902AA8CF95002E4343 /* homepageViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E1DC1732AB9196D006C92D9 /* UnicaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UnicaOne-Regular.ttf"; sourceTree = "<group>"; };
 		6E4131892AA8CF95002E4343 /* moneyOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moneyOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E41318C2AA8CF95002E4343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E41318E2AA8CF95002E4343 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E1DC1722AB9195B006C92D9 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				6E1DC1732AB9196D006C92D9 /* UnicaOne-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		6E4131802AA8CF95002E4343 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 				6E561C622AA9C806003719F9 /* detail-module */,
 				6ED674AB2AB71D3D002E3969 /* exchangeRate-module */,
 				6E577EC82AA8D24D0033BA06 /* Entity */,
+				6E1DC1722AB9195B006C92D9 /* Font */,
 				6E4131922AA8CF95002E4343 /* Main.storyboard */,
 				6E4131952AA8CF96002E4343 /* Assets.xcassets */,
 				6E4131972AA8CF96002E4343 /* LaunchScreen.storyboard */,
@@ -399,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E1DC1742AB9196D006C92D9 /* UnicaOne-Regular.ttf in Resources */,
 				6E4131992AA8CF96002E4343 /* LaunchScreen.storyboard in Resources */,
 				6E4131962AA8CF96002E4343 /* Assets.xcassets in Resources */,
 				6E6942C52AADF517006035A2 /* wallet.sqlite in Resources */,

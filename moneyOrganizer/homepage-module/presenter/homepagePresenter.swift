@@ -154,15 +154,15 @@ class BarChartView: UIView {
                 let y1 = rect.height - barHeight1 - 15
                 let y2 = rect.height - barHeight2 - 15
                 
-                let barColor1 = UIColor(hex: "DBFF00")
-                let barColor2 = UIColor(hex: "2F2F2F")
+                let barColor1 = UIColor(named: "barColor1")
+                let barColor2 = UIColor(named: "barColor2")
                 
                 let barRect1 = CGRect(x: x, y: y1, width: barWidth, height: barHeight1)
-                context.setFillColor(barColor1.cgColor)
+                context.setFillColor(barColor1!.cgColor)
                 context.fill(barRect1)
 
                 let barRect2 = CGRect(x: x2, y: y2, width: barWidth, height: barHeight2)
-                context.setFillColor(barColor2.cgColor)
+                context.setFillColor(barColor2!.cgColor)
                 context.fill(barRect2)
                 
                 let label = days[index]
@@ -176,21 +176,3 @@ class BarChartView: UIView {
             }
         }
     }
-
-
-extension UIColor {
-    convenience init(hex: String) {
-        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
-        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
-        
-        var rgb: UInt64 = 0
-        
-        Scanner(string: hexSanitized).scanHexInt64(&rgb)
-        
-        let red = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
-        let green = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
-        let blue = CGFloat(rgb & 0x0000FF) / 255.0
-        
-        self.init(red: red, green: green, blue: blue, alpha: 1.0)
-    }
-}

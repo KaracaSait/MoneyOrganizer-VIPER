@@ -25,6 +25,7 @@ class detailViewController: UIViewController {
     @IBOutlet weak var recentActivitiesLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    @IBOutlet weak var backButtonImage: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,15 +38,17 @@ class detailViewController: UIViewController {
         detailImage.image = UIImage(named: "detailBack")
         dateImage.image = UIImage(named: "dateImage")
         
-        let plusButtonImage = UIImage(named: "plusButton")
         plusButton.setTitle("", for: .normal)
-        plusButton.setImage(plusButtonImage, for: .normal)
+        plusButton.setImage(UIImage(named: "plusButton"), for: .normal)
+        plusButton.setImage(UIImage(named: "plusButtonPush"), for: .highlighted)
         view.addSubview(plusButton)
         
-        let minusButtonImage = UIImage(named: "minusButton")
         minusButton.setTitle("", for: .normal)
-        minusButton.setImage(minusButtonImage, for: .normal)
+        minusButton.setImage(UIImage(named: "minusButton"), for: .normal)
+        minusButton.setImage(UIImage(named: "minusButtonPush"), for: .highlighted)
         view.addSubview(minusButton)
+        
+        backButtonImage.image = UIImage(named: "backButton")
         
         accountLabel.text = whichAccount?.name!
         recentActivitiesLabel.text = "Recent Activities"
@@ -67,6 +70,9 @@ class detailViewController: UIViewController {
         detailPresenterObject?.showAlert(title: "Minus", message: "Minus", whichAccount: (whichAccount?.id)!)
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 extension detailViewController: PresenterToViewDetailProtocol {

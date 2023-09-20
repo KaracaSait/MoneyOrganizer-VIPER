@@ -17,6 +17,9 @@ class homepageViewController: UIViewController {
     @IBOutlet weak var helloLabel: UILabel!
     @IBOutlet weak var exchangeRateButtonImage: UIButton!
     
+    @IBOutlet weak var incomeImage: UIImageView!
+    @IBOutlet weak var expenseImage: UIImageView!
+    
     var AccountList = [accounts]()
     
     var bankAccount = [accountDetail]()
@@ -35,12 +38,8 @@ class homepageViewController: UIViewController {
         homepageTableView.dataSource = self
         homepageTableView.delegate = self
         
-        let customBackButtonImage = UIImage(named: "backButton")
-        let customBackButtonMaskImage = UIImage(named: "backButton")
-        navigationController?.navigationBar.backIndicatorImage = customBackButtonImage
-        navigationController?.navigationBar.backIndicatorTransitionMaskImage = customBackButtonMaskImage
-        navigationController?.navigationBar.topItem?.backButtonTitle = ""
-        navigationController?.navigationBar.tintColor = .black
+        incomeImage.backgroundColor = UIColor(named: "barColor1")
+        expenseImage.backgroundColor = UIColor(named: "barColor2")
         
         graphicView.backgroundColor = .clear
         graphicBackground.image = UIImage(named: "graphicBackground")

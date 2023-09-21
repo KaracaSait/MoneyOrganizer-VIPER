@@ -10,7 +10,7 @@ import UIKit
 class exchangeRateTableViewCell: UITableViewCell {
 
     @IBOutlet weak var rateName: UILabel!
-    @IBOutlet weak var ratePrice: UILabel!
+    @IBOutlet weak var tableViewCellBackground: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

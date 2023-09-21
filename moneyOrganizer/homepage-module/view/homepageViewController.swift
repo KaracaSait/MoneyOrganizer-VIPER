@@ -20,8 +20,10 @@ class homepageViewController: UIViewController {
     @IBOutlet weak var incomeImage: UIImageView!
     @IBOutlet weak var expenseImage: UIImageView!
     
-    var AccountList = [accounts]()
+    let calendar = Calendar.current
+    let now = Date()
     
+    var AccountList = [accounts]()
     var bankAccount = [accountDetail]()
     var cashAccount = [accountDetail]()
     var creditAccount = [accountDetail]()
@@ -49,10 +51,9 @@ class homepageViewController: UIViewController {
         exchangeRateButtonImage.setImage(UIImage(named: "exchangeRateIconPush"), for: .highlighted)
         view.addSubview(exchangeRateButtonImage)
         
-        helloLabel.text = "Hello, King!"
+        helloLabelTime()
         
         veritabaniKopyala()
-        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -88,6 +89,22 @@ class homepageViewController: UIViewController {
             do{
                 try fileManager.copyItem(atPath: bundleYolu!, toPath: kopyalanacakYer.path)
             }catch{}
+        }
+    }
+    
+    func helloLabelTime(){
+        let startDate = calendar.date(bySettingHour: 6, minute: 0, second: 0, of: now)!
+        let midDate = calendar.date(bySettingHour: 11, minute: 0, second: 0, of: now)!
+        let mid2Date = calendar.date(bySettingHour: 17, minute: 0, second: 0, of: now)!
+        let endDate = calendar.date(bySettingHour: 23, minute: 0, second: 0, of: now)!
+        if now >= startDate && now <= midDate {
+            helloLabel.text = "GOOD MORNING"
+        }else if now >= midDate && now <= mid2Date {
+            helloLabel.text = "GOOD AFTERNOON"
+        }else if now >= mid2Date && now <= endDate {
+            helloLabel.text = "GOOD EVENING"
+        }else {
+            helloLabel.text = "GOODNIGHT"
         }
     }
     
@@ -134,10 +151,10 @@ extension homepageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "homepageCell", for: indexPath) as! homepageTableViewCell
+        cell.selectionStyle = .none
         let part = AccountList[indexPath.row]
         
-        cell.tableViewImage.image = UIImage(named: "card")
-        //cell.tableViewImage.image = UIImage(named: part.picture!)
+        cell.tableViewImage.image = UIImage(named: part.picture!)
         cell.accountLabel.text = part.name
         cell.processLabel.text = "Recent Activities"
         
@@ -201,7 +218,6 @@ extension homepageViewController: UITableViewDelegate, UITableViewDataSource {
             }
         default: break
         }
-        
         
         return cell
     }

@@ -38,53 +38,28 @@ class homepagePresenter : ViewToPresenterHomepageProtocol {
         let today = formatter.string(from: Date())
         let todayBC = formatterDay.string(from: Date())
         
-        if let SixDaysAgo = Calendar.current.date(byAdding: .day, value: -6, to: Date()) {
-            let SixDaysAgoString = formatter.string(from: SixDaysAgo)
-            homepageInteractor?.readBarChartDetail(day: SixDaysAgoString)
-            let SixDaysAgoStringBC = formatterDay.string(from: SixDaysAgo)
-            days.append(SixDaysAgoStringBC)
-        }
+        let dateValues = [
+            Calendar.current.date(byAdding: .day, value: -6, to: Date()),
+            Calendar.current.date(byAdding: .day, value: -5, to: Date()),
+            Calendar.current.date(byAdding: .day, value: -4, to: Date()),
+            Calendar.current.date(byAdding: .day, value: -3, to: Date()),
+            Calendar.current.date(byAdding: .day, value: -2, to: Date()),
+            Calendar.current.date(byAdding: .day, value: -1, to: Date())
+        ]
         
-        if let FiveDaysAgo = Calendar.current.date(byAdding: .day, value: -5, to: Date()) {
-            let FiveDaysAgoString = formatter.string(from: FiveDaysAgo)
-            homepageInteractor?.readBarChartDetail(day: FiveDaysAgoString)
-            let FiveDaysAgoStringBC = formatterDay.string(from: FiveDaysAgo)
-            days.append(FiveDaysAgoStringBC)
-        }
-        
-        if let FourDaysAgo = Calendar.current.date(byAdding: .day, value: -4, to: Date()) {
-            let FourDaysAgoString = formatter.string(from: FourDaysAgo)
-            homepageInteractor?.readBarChartDetail(day: FourDaysAgoString)
-            let FourDaysAgoStringBC = formatterDay.string(from: FourDaysAgo)
-            days.append(FourDaysAgoStringBC)
-        }
-        
-        if let ThreeDaysAgo = Calendar.current.date(byAdding: .day, value: -3, to: Date()) {
-            let ThreeDaysAgoString = formatter.string(from: ThreeDaysAgo)
-            homepageInteractor?.readBarChartDetail(day: ThreeDaysAgoString)
-            let ThreeDaysAgoStringBC = formatterDay.string(from: ThreeDaysAgo)
-            days.append(ThreeDaysAgoStringBC)
-        }
-        
-        if let TwoDaysAgo = Calendar.current.date(byAdding: .day, value: -2, to: Date()) {
-            let TwoDaysAgoString = formatter.string(from: TwoDaysAgo)
-            homepageInteractor?.readBarChartDetail(day: TwoDaysAgoString)
-            let TwoDaysAgoStringBC = formatterDay.string(from: TwoDaysAgo)
-            days.append(TwoDaysAgoStringBC)
-        }
-        
-        if let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date()) {
-            let yesterdayString = formatter.string(from: yesterday)
-            homepageInteractor?.readBarChartDetail(day: yesterdayString)
-            let yesterdayStringBC = formatterDay.string(from: yesterday)
-            days.append(yesterdayStringBC)
+        for dateValue in dateValues {
+            if let date = dateValue {
+                let dateString = formatter.string(from: date)
+                homepageInteractor?.readBarChartDetail(day: dateString)
+                let dateStringBC = formatterDay.string(from: date)
+                days.append(dateStringBC)
+            }
         }
         homepageInteractor?.readBarChartDetail(day: today)
         days.append(todayBC)
     }
     
 }
-
 
 extension homepagePresenter : InteractorToPresenterHomepageProtocol {
     

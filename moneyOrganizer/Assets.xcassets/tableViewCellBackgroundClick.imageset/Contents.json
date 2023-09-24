@@ -6,45 +6,12 @@
       "scale" : "1x"
     },
     {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "filename" : "tableViewCellBackgroundClickDark.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
       "filename" : "tableViewCellBackgroundClick@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "filename" : "tableViewCellBackgroundClickDark@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
       "filename" : "tableViewCellBackgroundClick@3x.png",
-      "idiom" : "universal",
-      "scale" : "3x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "filename" : "tableViewCellBackgroundClickDark@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

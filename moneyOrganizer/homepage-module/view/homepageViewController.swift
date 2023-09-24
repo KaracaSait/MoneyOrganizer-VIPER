@@ -53,7 +53,18 @@ class homepageViewController: UIViewController {
         
         helloLabelTime()
         
-        veritabaniKopyala()
+        navigationItem.title = "malleT"
+        let appearance = UINavigationBarAppearance()
+        navigationItem.hidesBackButton = true
+        
+        appearance.backgroundColor = UIColor(named: "barColor2")
+        appearance.titleTextAttributes = [.font:UIFont(name: "UnicaOne-Regular", size: 30)!,.foregroundColor: UIColor(named: "barColor1")!]
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.compactScrollEdgeAppearance = appearance
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -76,20 +87,6 @@ class homepageViewController: UIViewController {
     
     @IBAction func exchangeRateButton(_ sender: Any) {
         performSegue(withIdentifier: "toExchangeRate", sender: nil)
-    }
-    
-    func veritabaniKopyala() {
-        let bundleYolu = Bundle.main.path(forResource: "wallet", ofType: ".sqlite")
-        let hedefYol = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let fileManager = FileManager.default
-        let kopyalanacakYer = URL(fileURLWithPath: hedefYol).appendingPathComponent("wallet.sqlite")
-        if fileManager.fileExists(atPath: kopyalanacakYer.path){
-            print("Veritabanı zaten var")
-        }else{
-            do{
-                try fileManager.copyItem(atPath: bundleYolu!, toPath: kopyalanacakYer.path)
-            }catch{}
-        }
     }
     
     func helloLabelTime(){

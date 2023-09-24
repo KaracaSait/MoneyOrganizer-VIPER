@@ -22,6 +22,7 @@ class exchangeRateViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var exchangeRateBackground: UIImageView!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var exchangeRateImage: UIImageView!
     
     var tapGesture: UITapGestureRecognizer!
     
@@ -47,6 +48,7 @@ class exchangeRateViewController: UIViewController {
         
         backButtonImage.image = UIImage(named: "backButton")
         exchangeRateBackground.image = UIImage(named: "exchangeRateBackground")
+        exchangeRateImage.image = UIImage(named: "exchangeImage")
         textField.backgroundColor = .clear
         
         priceLabel.text = "-"
@@ -57,9 +59,6 @@ class exchangeRateViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         exchangeRatePresenterObject?.readCurrencies()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         UserDefaults.standard.setValue(1, forKey: "exchangeRate")
     }
     
